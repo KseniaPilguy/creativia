@@ -1,0 +1,74 @@
+.productFeatures {
+
+    h2 {
+        font: 30px 'Raleway-Bold', sans-serif;
+        color: $darkGrey;
+        text-align: center;
+        margin: 100px auto 50px;
+
+        span {
+            color: $pink;
+        }
+    }
+
+    p {
+        font: 16px 'Lato-Bold',sans-serif;
+        text-align: center;
+        margin-bottom: 102px;
+
+        span {
+            color: $pink;
+        }
+    }
+
+    .contain {
+
+        .content {
+            width: 368px;
+            height: 51px;
+            border: 1px solid #e7e7e7;
+            margin-bottom: 27px;
+
+            p {
+                display: inline;
+                text-transform: uppercase;
+                color: $darkGrey;
+                font: 20px 'Raleway-Medium', sans-serif;
+            }
+
+            img {
+                    position: relative;
+                    top: -4px; 
+                    width: 37px;
+                    height: 32px;
+                    border: none;
+                    background-image: url('../../img/done-grey.png');        
+            }
+
+            &:hover {
+                background-color: $pink;
+
+                p {
+                    color: $white;
+                }
+
+                img {
+                
+                    background-image: url('../../img/done-pink.png');  
+                }
+            }
+        }
+
+        .content-left {
+            text-align: right;
+
+            img { margin-left: 10px; }
+        }
+
+        .content-right {
+            text-align: left;
+
+            img { margin-right: 10px; }
+        }
+    }
+}

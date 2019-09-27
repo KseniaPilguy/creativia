@@ -1,0 +1,75 @@
+#carousel {
+    width: 100%;
+    position: relative;
+    top: 0;
+    z-index: 1;
+
+    .carousel-item {
+
+        .hover {
+            width: 100%;
+            display: none;
+            position: absolute;
+
+            z-index: 3;
+        }
+
+        .image {
+            width: 100%;
+
+            &:hover ~ .hover {
+                display: block;
+            }
+        }
+
+        h5 {
+            margin-bottom: 46px;
+            font: 30px 'Raleway-Bold', sans-serif;
+            color: #ffffff;
+
+            span {
+                color: $pink;
+            }
+        }
+
+        p {
+            font: 16px 'Lato-Regular', sans-serif;
+            color: #f1f0f0;
+            margin-bottom: 52px;
+            line-height: 1.6;
+        }
+
+        .carousel-caption {
+            z-index: 3;
+            padding: 0;
+            margin: 0 auto;
+            bottom: 200px;
+
+            .btn {
+                width: 170px;
+                height: 50px;
+                text-transform: uppercase;
+                font: 20px 'Raleway-Medium', sans-serif;
+                color: $white;
+                border-radius: 0%;
+                margin: 0 15px;
+                background-color: #131313;
+            
+                &:hover {
+                background-color: $pink;
+            }
+        }
+
+            
+        }
+    }
+
+    .carousel-control-next, 
+    .carousel-control-prev {
+        width: 7%;
+
+        span {
+            cursor: pointer;
+        }
+    }
+}
