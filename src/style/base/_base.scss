@@ -50,6 +50,7 @@ ul {
 }
 
 .container {
+  max-width: 1200px;
   width: 100%;
   padding-right: 15px;
   padding-left: 15px;
@@ -71,11 +72,6 @@ a {
     outline: none;
   }
 }
-.wrapper {
-  display: grid;
-  grid-template-areas:
-    "header"
-    "content";
-}
+
 
 

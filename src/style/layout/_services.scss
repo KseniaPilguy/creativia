@@ -24,20 +24,12 @@
     }
 
     .services-list {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        flex-wrap: wrap;
 
         .service-item {
             max-width: 570px;
             margin: 0 15px 57px;
 
             .service-item-caption {
-                display: flex;
-                flex-direction: row;
-                justify-content: flex-start;
-                align-items: center; 
                 margin-bottom: 30px;
 
                 .hexagon
@@ -45,16 +37,8 @@
                     height: 100px;
                     background: $listColor;
                     position: relative;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
                     margin-right: 32px;
                     left: 25px;
-
-                    img {
-                        width: 35px;
-                        height: 35px;
-                    }
                 }
                 
                 .hexagon:before
@@ -105,6 +89,10 @@
 
                     .hexagon {
                         background-color: $pink;
+
+                        i {
+                            color: $white;
+                        }
                     }
 
                     .hexagon::before {

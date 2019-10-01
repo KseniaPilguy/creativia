@@ -1,0 +1,96 @@
+.follow {
+    width: 100%;
+    height: 383px;
+    position: relative;
+    background-image: url('../../img/socialbg.png');
+    background-size: cover;
+    z-index: 1;
+
+    &:hover {
+        .hover-bg {
+            display: block;
+        }
+    }
+
+    .hover-bg {
+        display: none;
+        width: 100%;
+        height: 383px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: rgba(0,0,0,0.5);
+    }
+
+    .container {
+        z-index: 3;
+    
+    h2 {
+        @include textCaption;
+        color: $white;
+        margin: 0 auto 50px;
+        padding-top: 100px;
+
+        span {
+            color: $pink;
+        }
+    }
+
+    .social-item {
+        margin: 0 25px;
+
+        p {
+            font: 16px 'Lato-Regular', sans-serif;
+            color: $white;
+        }
+
+        .hex {
+            height: 70px;
+            width: 40px;
+            background: transparent;
+            position: relative;
+        }
+        
+        .hex:before, .hex:after {
+            content:"";
+            border-top: 35px solid transparent;
+            border-bottom: 35px solid transparent;
+            position: absolute;
+        }
+        
+        .hex:before {
+            left: -19px;
+            border-right: 20px solid $pink;
+        }
+        
+        .hex:after {
+            right: -19px;
+            top: 0;
+            border-left: 20px solid $pink;
+        }
+        
+        .hex.inner {
+            background-color: transparent;
+            transform: scale(.95, .95);
+            z-index:1;
+        }
+        .hex.inner:before {
+            border-right: 20px solid transparent;
+        }
+        .hex.inner:after {
+            border-left: 20px solid transparent;
+        }
+}
+
+    .line {
+
+        img {
+        display: block;
+        margin: 0 auto;
+        position: relative;
+        top: 32px;
+        }
+    }
+
+}
+}

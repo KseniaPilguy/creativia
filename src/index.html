@@ -9,20 +9,22 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="css/main.min.css" />
+  <script src="https://kit.fontawesome.com/cee53cf674.js" crossorigin="anonymous"></script>
   <title>Titel</title>
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-default" role="navigation">
-    <div class="navbar-header">
+  <nav class="navbar row navbar-expand-lg navbar-default" role="navigation">
+    <div class="container">
+    <div class="navbar-header col-3">
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
         aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <a class="navbar-brand col-5" href="#"><img src="img/logo.png"></a>
+      <a class="navbar-brand" href="#"><img src="img/logo.png"></a>
     </div>
     <div class="collapse navbar-collapse col-7" id="bs-example-navbar-collapse-1">
-      <ul class="navbar-nav flex-end">
+      <ul class="navbar-nav ">
         <li class="active"><a href="#">Home</a></li>
         <li><a href="#">About us</a></li>
         <li><a href="#">portfolio</a></li>
@@ -33,6 +35,7 @@
         <li><a href="#">contact</a></li>
       </ul>
     </div>
+  </div>
   </nav>
 
   <div id="carousel" class="carousel slide" data-ride="carousel">
@@ -80,12 +83,13 @@
   </div>
 
 
-  <div class="container aboutCreativia">
+  <section class="aboutCreativia">
+    <div class="container">
     <h2> about <span>creativia</span></h2>
     <p>Lorem ipsum dolor sit amet, consectetur <span> adipiscing elit. </span> Integer sed magna vel velit dignissim
       luctus eu in urna. Dapibus egestas turpis. </p>
     <div class="row">
-      <div class="col-sm-12 col-lg-6 description">
+      <div class="col-12 col-lg-6 description">
         <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et dolor justo. Phasellus eu ligula ac nisl
           volutpat tincidunt. Vestibulum vitae rhoncus odio Fusce sed enim erat. Mauris dictum lorem eu tortor porta
           placerat. Suspendisse ac vestibulum eros. Nulla mi ipsum, consequat commodo condimentum vitae, </p>
@@ -142,16 +146,18 @@
         </div>
       </div>
 
-      <div class="col-sm-12 col-lg-6 gallery">
+      <div class="col-12 col-lg-6 gallery">
+
         <div class="clip-wrap">
-          <img src="img/center.png" alt="demo-clip-path" width="428" height="360" class="clip-polygon center">
+          <img src="img/center.png" alt="demo-clip-path" width="428" height="360" class="clip-polygon center d-block">
         </div>
         <div class="clip-wrap">
-          <img src="img/leftImg.png" alt="demo-clip-path" width="428" height="360" class="clip-polygon left">
+          <img src="img/leftImg.png" alt="demo-clip-path" width="428" height="360" class="clip-polygon left d-block">
         </div>
         <div class="clip-wrap">
-          <img src="img/rightImg.png" alt="demo-clip-path" width="428" height="360" class="clip-polygon right">
+          <img src="img/rightImg.png" alt="demo-clip-path" width="428" height="360" class="clip-polygon right d-block">
         </div>
+
        </div>
     </div>
 
@@ -159,45 +165,62 @@
       <img src='img/line.png'>
     </div>
 
-    <div class="container info">
-      <div class="row">
-        <div class="col-sm-3">
-          <div class="hexagon">
-            <img src="img/heart.png">
-          </div>
+    <div class="info ">
+      <div class="creativia-items row d-flex flex-row justify-content-center flex-wrap flex-md-nowrap">
+
+        <div class="creativia-item col-12 col-sm-6 col-md-6 col-lg-3 d-flex flex-column align-items-center">
+            <div class="hex">
+                <div class="hex inner d-flex justify-content-center align-items-center">
+                    <i class="fas fa-heart"></i>
+                </div>
+            </div>
           <h3>FLAT DESIGN</h3>
           <p>Lorem ipsum dolor sit amet cras vitae sodales ac nec prellentesque vivamus
             eget mauris fusce sit amet </p>
         </div>
-        <div class="col-sm-3">
-          <div class="hexagon">
-            <img src="img/file_download_done.png">
-          </div>
+
+        <div class="creativia-item col-12 col-sm-6 col-md-6 col-lg-3 d-flex flex-column align-items-center">
+            <div class="hex">
+                <div class="hex inner d-flex justify-content-center align-items-center">
+                    <i class="fas fa-check"></i>
+                </div>
+            </div>
           <h3>RETINA READY</h3>
           <p>Lorem ipsum dolor sit amet cras vitae sodales ac nec prellentesque vivamus
             eget mauris fusce sit amet </p>
         </div>
-        <div class="col-sm-3">
-          <div class="hexagon">
-            <img src="img/phone.png">
-          </div>
+
+        <div class="creativia-item col-12 col-sm-6 col-md-6 col-lg-3 d-flex flex-column align-items-center">
+            <div class="hex">
+                <div class="hex inner d-flex justify-content-center align-items-center">
+                    <i class="fas fa-mobile-alt"></i>
+                </div>
+            </div>
           <h3>RESPONSIVE</h3>
           <p>Lorem ipsum dolor sit amet cras vitae sodales ac nec prellentesque vivamus
             eget mauris fusce sit amet </p>
         </div>
-        <div class="col-sm-3">
-          <div class="hexagon">
-            <img src="img/fire.png">
-          </div>
+
+        <div class="creativia-item col-12 col-sm-6 col-md-6 col-lg-3 d-flex flex-column align-items-center">
+            <div class="hex">
+                <div class="hex inner d-flex justify-content-center align-items-center">
+                    <i class="fas fa-fire"></i>
+                </div>
+            </div>
           <h3>Clean & useful</h3>
           <p>Lorem ipsum dolor sit amet cras vitae sodales ac nec prellentesque vivamus
             eget mauris fusce sit amet </p>
         </div>
+
       </div>
     </div>
   </div>
+  </section>
 
-  <div class="portfolio">
+
+   <!-- PORTFOLIO  -->
+
+  <section class="container-fluid portfolio">
     <h2> protfolio </h2>
     <ul>
       <li>All</li>
@@ -277,27 +300,33 @@
       </div>
       <img src="img/shape-line.png" class="line">
     </div>
-  </div>
+  </section>
 
-  <div class="productFeatures">
+
+  <!-- productFeatures -->
+
+
+  <section class="productFeatures">
+    <div class="container">
     <h2> our <span>product features</span></h2>
     <p>Lorem ipsum dolor sit amet, consectetur <span>adipiscing elit.</span> Integer sed magna vel velit dignissim
       luctus eu in urna. Dapibus egestas turpis. </p>
 
-    <div class="features">
-      <div class="features-item mb-3 contain contain-left">
-        <div class="p-2 content content-left">
-          <p>Unlimited Color Options</p><div class="hexagon"><img src="img/done-grey.png"></div>
+    <div class="features d-flex flex-row justify-content-center flex-wrap row">
+
+      <div class="features-item col-4 d-flex flex-column contain contain-left">
+        <div class="p-2 content d-flex flex-row align-items-center justify-content-end content-left">
+          <p>Unlimited Color Options</p><div class="hexagon d-flex justify-content-center align-items-center"><i class="fas fa-check"></i></div>
         </div>
-        <div class="p-2 content content-left">
-          <p>Outstanding Support</p><div class="hexagon"><img src="img/done-grey.png"></div>
+        <div class="p-2 content d-flex flex-row align-items-center justify-content-end content-left">
+          <p>Outstanding Support</p><div class="hexagon d-flex justify-content-center align-items-center"><i class="fas fa-check"></i></div>
         </div>
-        <div class="p-2 content content-left">
-          <p>Retina Ready</p> <div class="hexagon"><img src="img/done-grey.png"></div>
+        <div class="p-2 content d-flex flex-row align-items-center justify-content-end content-left">
+          <p>Retina Ready</p> <div class="hexagon d-flex justify-content-center align-items-center"><i class="fas fa-check"></i></div>
         </div>
       </div>
 
-            <div class="phone">
+            <div class="phone col-5">
             <div class="hexagon-big"> 
               <img src="img/found.png" class="found">
               <img src="img/dot.png" class="dot">
@@ -309,56 +338,58 @@
         </div>
 
 
-      <div class="features-item mb-3 contain">
-        <div class="p-2 content content-right">
-            <div class="hexagon"><img src="img/done-grey.png"></div> <p>Unlimited Color Options </p>
+      <div class="features-item col-3 d-flex flex-column contain">
+        <div class="p-2 content d-flex flex-row align-items-center content-right">
+            <div class="hexagon d-flex justify-content-center align-items-center"><i class="fas fa-check"></i></div> <p>Unlimited Color Options </p>
         </div>
-        <div class="p-2 content content-right">
-            <div class="hexagon"><img src="img/done-grey.png"></div> <p> Outstanding Support </p>
+        <div class="p-2 content d-flex flex-row align-items-center content-right">
+            <div class="hexagon d-flex justify-content-center align-items-center"><i class="fas fa-check"></i></div> <p> Outstanding Support </p>
         </div>
-        <div class="p-2 content content-right">
-            <div class="hexagon"><img src="img/done-grey.png"></div><p>Retina Ready</p>
+        <div class="p-2 content d-flex flex-row align-items-center content-right">
+            <div class="hexagon d-flex justify-content-center align-items-center"><i class="fas fa-check"></i></div><p>Retina Ready</p>
         </div>
       </div>
     </div>
   </div>
+</section>
 
 
       <!-- BLOCK FOR 'OUR CLINTS' -->
 
-  <div class="clints">
+  <section class="clints">
+    <div class="container">
     <div class="caption">
     <h2> our <span>clints</span> </h2>
     <p>Lorem ipsum dolor sit amet, consectetur <span>adipiscing elit.</span> Integer sed magna vel velit dignissim luctus eu in urna. Dapibus egestas turpis. </p>
   </div>
-  <div class="clints-section">
-    <div class="comments">
+  <div class="clints-section row d-flex flex-row justify-content-center flex-wrap">
+    <div class="comments col-12 col-xl-6">
       <h4> happy clients say </h4>
       <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed magna vel velit dignissim luctus eu in urna. Dapibus egestas turpis.  </p>
       <div class="clip-wrap">
           <img src="img/clients-photo.png" alt="demo-clip-path" width="66" height="57" class="clip-polygon center">
         </div>
       <h6>amr srour</h6>
-      <div class="scroll-bar">
+      <div class="scroll-bar d-flex flex-row justify-content-center">
         <button></button>
         <button></button>
         <button></button>
       </div>
     </div>
-    <div class="companies-names">
-      <div class="block"> 
+    <div class="companies-names col-12 col-xl-6 d-flex flex-wrap justify-content-center">
+      <div class="block d-flex flex-row align-items-center justify-content-center"> 
         <img src="img/grafi.png">
         <p> graphicriver </p>
       </div>
-      <div class="block">
+      <div class="block d-flex flex-row align-items-center justify-content-center"> 
           <img src="img/vidoehive.png">
           <p> videohive </p>
       </div>
-      <div class="block">
+      <div class="block d-flex flex-row align-items-center justify-content-center"> 
           <img src="img/photodune.png">
           <p> photodune </p>
       </div>
-      <div class="block">
+      <div class="block d-flex flex-row align-items-center justify-content-center"> 
           <img src="img/codeconyan.png">
           <p> codecanyon </p>
       </div>
@@ -366,94 +397,94 @@
     </div>
   </div>
   <img src="img/shape-line.png" class="line">
-  </div>
+</div>
+  </section>
 
 
     <!-- BLOCK FOR 'OUR TEAMWORK' -->
 
-      <div class="teamwork">
+      <section class="teamwork">
+        <div class="container">
         <h2>our <span>teamwork</span></h2>
         <p>Lorem ipsum dolor sit amet, consectetur <span>adipiscing elit.</span> Integer sed magna vel velit dignissim luctus eu in urna. Dapibus egestas turpis. </p>
-      <div class="teamwork-blocks">
+      <div class="teamwork-blocks row d-flex justify-content-center flex-row flex-wrap">
 
-        <div class="employee-card">
+        <div class="employee-card col-3 d-flex flex-column justify-content-center">
           <img src="img/employee4.png">
           <h2>Bruce Wayne</h2>
           <h3>Webdesigner</h3> 
 
-          <div class="hover-employee-card">
-              <div class="hexagon">
+          <div class="hover-employee-card justify-content-center flex-row align-items-center">
+              <div class="hexagon d-flex justify-content-center align-items-center">
                 <img src="img/Facebook.png">
               </div>
-              <div class="hexagon">
+              <div class="hexagon d-flex justify-content-center align-items-center">
                   <img src="img/twitter.png">
               </div>
-              <div class="hexagon">
+              <div class="hexagon d-flex justify-content-center align-items-center">
                   <img src="img/G+ .png">
               </div>
           </div>
         </div>
 
 
-        <div class="employee-card">
+        <div class="employee-card col-3 d-flex flex-column justify-content-center">
             <img src="img/employee2.png">
             <h2>Amr Srour </h2>
             <h3>Webdesigner</h3> 
             
-          <div class="hover-employee-card">
-              <div class="hexagon">
+          <div class="hover-employee-card justify-content-center flex-row align-items-center">
+            <div class="hexagon d-flex justify-content-center align-items-center">
                 <img src="img/Facebook.png">
               </div>
-              <div class="hexagon">
+              <div class="hexagon d-flex justify-content-center align-items-center">
                   <img src="img/twitter.png">
               </div>
-              <div class="hexagon">
+              <div class="hexagon d-flex justify-content-center align-items-center">
                   <img src="img/G+ .png">
               </div>
           </div>
           </div>
-          <div class="employee-card">
+          <div class="employee-card col-3 d-flex flex-column justify-content-center">
               <img src="img/employee3.png">
               <h2>SARAH DOE</h2>
               <h3>Webdesigner</h3> 
               
-          <div class="hover-employee-card">
-              <div class="hexagon">
+              <div class="hover-employee-card justify-content-center flex-row align-items-center">
+                <div class="hexagon d-flex justify-content-center align-items-center">
                 <img src="img/Facebook.png">
               </div>
-              <div class="hexagon">
+              <div class="hexagon d-flex justify-content-center align-items-center">
                   <img src="img/twitter.png">
               </div>
-              <div class="hexagon">
+              <div class="hexagon d-flex justify-content-center align-items-center">
                   <img src="img/G+ .png">
               </div>
           </div>
             </div>
-            <div class="employee-card">
+            <div class="employee-card col-3 d-flex flex-column justify-content-center">
                 <img src="img/employee4.png">
                 <h2>johan de</h2>
                 <h3>Webdesigner</h3> 
                 
-          <div class="hover-employee-card">
-              <div class="hexagon">
+                <div class="hover-employee-card justify-content-center flex-row align-items-center">
+                  <div class="hexagon d-flex justify-content-center align-items-center">
                 <img src="img/Facebook.png">
               </div>
-              <div class="hexagon">
+              <div class="hexagon d-flex justify-content-center align-items-center">
                   <img src="img/twitter.png">
               </div>
-              <div class="hexagon">
+              <div class="hexagon d-flex justify-content-center align-items-center">
                   <img src="img/G+ .png">
               </div>
           </div>
               </div>
-      </div>
-      
-      
+            </div>
     <div class='line'>
         <img src='img/line.png'>
       </div>
       </div>
-
+</section>
 
        <!-- BLOCK FOR 'OUR SKILLS' -->
 
@@ -464,15 +495,16 @@
 
       <!-- BLOCK FOR 'OUR SERVICES' -->
 
-      <div class="services">
+      <section class="services">
+        <div class="container">
           <h2>our <span>services</span></h2>
           <p>Lorem ipsum dolor sit amet, consectetur <span>adipiscing elit.</span> Integer sed magna vel velit dignissim luctus eu in urna. Dapibus egestas turpis. </p>
-       <div class="services-list">
+       <div class="services-list row d-flex flex-row justify-content-center flex-wrap">
 
-       <div class="service-item">
-      <div class="service-item-caption">
-            <div class="hexagon">
-                <img src="img/quotes.png">
+       <div class="service-item col-6">
+      <div class="service-item-caption d-flex flex-row justify-content-start align-items-center">
+            <div class="hexagon d-flex justify-content-center align-items-center">
+                <i class="fas fa-code"></i>
             </div>
               <h3> development </h3>
             </div>
@@ -481,10 +513,10 @@
               </div>
        </div>
 
-       <div class="service-item">
-          <div class="service-item-caption">
-                <div class="hexagon">
-                    <img src="img/html.png">
+       <div class="service-item col-6">
+        <div class="service-item-caption d-flex flex-row justify-content-start align-items-center">
+          <div class="hexagon d-flex justify-content-center align-items-center">
+              <i class="fab fa-html5"></i>
                 </div>
                   <h3> HTML / CSS </h3>
                 </div>
@@ -493,10 +525,10 @@
                   </div>
            </div>
 
-           <div class="service-item">
-              <div class="service-item-caption">
-                    <div class="hexagon">
-                        <img src="img/wordpress.png">
+           <div class="service-item col-6">
+            <div class="service-item-caption d-flex flex-row justify-content-start align-items-center">
+              <div class="hexagon d-flex justify-content-center align-items-center">
+                  <i class="fab fa-wordpress-simple"></i>
                     </div>
                       <h3> Wordpress </h3>
                     </div>
@@ -505,10 +537,10 @@
                       </div>
                </div>
 
-               <div class="service-item">
-                  <div class="service-item-caption">
-                        <div class="hexagon">
-                            <img src="img/application.png">
+               <div class="service-item col-6">
+                <div class="service-item-caption d-flex flex-row justify-content-start align-items-center">
+                  <div class="hexagon d-flex justify-content-center align-items-center">
+                      <i class="fas fa-mobile-alt"></i>
                         </div>
                           <h3> Applications </h3>
                         </div>
@@ -517,10 +549,10 @@
                           </div>
                    </div>
 
-                   <div class="service-item">
-                      <div class="service-item-caption">
-                            <div class="hexagon">
-                                <img src="img/pen.png">
+                   <div class="service-item col-6">
+                    <div class="service-item-caption d-flex flex-row justify-content-start align-items-center">
+                      <div class="hexagon d-flex justify-content-center align-items-center">
+                          <i class="fas fa-pencil-alt"></i>
                             </div>
                               <h3> ui / ux design </h3>
                             </div>
@@ -529,10 +561,10 @@
                               </div>
                        </div>
 
-                       <div class="service-item">
-                          <div class="service-item-caption">
-                              <div class="hexagon">
-                                  <img src="img/desktop.png">
+                       <div class="service-item col-6">
+                        <div class="service-item-caption d-flex flex-row justify-content-start align-items-center">
+                          <div class="hexagon d-flex justify-content-center align-items-center">
+                              <i class="fas fa-desktop"></i>
                               </div>
                                   <h3> Responsive layout </h3>
                                 </div>
@@ -546,18 +578,19 @@
       <div class="line">
       <img src="img/shape-line.png" >
       </div>
-
-        </div>
+</div>
+      </section>
 
 
         <!-- BLOCK FOR 'PLANS BESTSELLER' -->
 
         <div class="plans">
+          <div class="container">
             <h2>Plans  <span>Bestseller</span></h2>
             <p>Lorem ipsum dolor sit amet, consectetur <span>adipiscing elit.</span> Integer sed magna vel velit dignissim luctus eu in urna. Dapibus egestas turpis. </p>
-       <div class="plans-items">
+       <div class="plans-items row d-flex flex-row justify-content-space-around flex-wrap">
 
-         <div class="plan-item">
+         <div class="plan-item col-xl-3">
            <h6> reseller</h6>
            <h5>199$<sub>year</sup></h5>
            <ul>
@@ -571,7 +604,7 @@
            </ul>
          </div>
 
-         <div class="plan-item">
+         <div class="plan-item col-xl-3">
             <h6> reseller</h6>
             <h5>199$<sub>year</sup></h5>
             <ul>
@@ -585,7 +618,7 @@
             </ul>
           </div>
 
-          <div class="plan-item">
+          <div class="plan-item col-xl-3">
               <h6> reseller</h6>
               <h5>199$<sub>year</sup></h5>
               <ul>
@@ -599,7 +632,7 @@
               </ul>
             </div>
 
-            <div class="plan-item">
+            <div class="plan-item col-xl-3">
                 <h6> reseller</h6>
                 <h5>199$<sub>year</sup></h5>
                 <ul>
@@ -614,10 +647,12 @@
               </div>
        </div>
         </div>
+      </div>
 
         <!-- last tweets -->
 
-        <div class="twitter">
+        <section class="twitter">
+          <div class="container twitter-container d-flex flex-column justify-content-center align-items-center">
           <img src="img/twitter-icon.png">
           <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed magna vel velit dignissim luctus eu in urna. Dapibus egestas turpis.  </p>
         
@@ -628,6 +663,142 @@
               <img src="img/shape-line.png" >
               </div>
         </div>
+      </section>
+
+        <!-- our blog  -->
+
+        <section class="blog">
+          <div class="container">
+            <h2>our <span>Blog</span></h2>
+            <p>Lorem ipsum dolor sit amet, consectetur <span>adipiscing elit.</span> Integer sed magna vel velit dignissim luctus eu in urna. Dapibus egestas turpis. </p>
+          <div class="articles d-flex flex-column justify-content-center">
+
+            <div class="article-item row d-flex justify-content-center">
+              <div class="item-img col-12 col-xl-4">
+              <img src="img/blog-img1.png" class="float-left">
+              <div class="hover-block"></div>
+            </div>
+            <div class="item-description col-12 col-xl-6 d-flex flex-column">
+              <h4>Lorem ipsum dolor sit amet, consectetur </h4>
+              <div class="activity d-flex flex-row">
+                <div class="user d-flex flex-row">
+                  <img src="img/user.png">
+                  <p> admin </p>
+                </div>
+                <div class="comment d-flex flex-row">
+                    <img src="img/comment.png">
+                    <p> 1205 </p>
+                  </div>
+                  <div class="view d-flex flex-row">
+                      <img src="img/view.png">
+                      <p> 1205 </p>
+                    </div>
+              </div>
+              <h5> Integer ornare libero nisi. Duis ac magna urna. Nulla facilisi. Phasellus at ante magna. Quisque nec porta nulla. Suspendisse nec orci vel elit aliquet blandit in non orci. Vivamus posuere dui eget lacinia rutrum. Cum sociis natoque penatibus ...</h5>
+              <button>view more</button>
+          </div>
+            </div>
+
+            <div class="article-item row d-flex justify-content-center">
+                <div class="item-img col-12 col-xl-4">
+                <img src="img/car.png" class="float-left">
+                <div class="hover-block"></div>
+              </div>
+              <div class="item-description col-12 col-xl-6 d-flex flex-column">
+                <h4>Lorem ipsum dolor sit amet, consectetur </h4>
+                <div class="activity d-flex flex-row">
+                  <div class="user d-flex flex-row">
+                    <img src="img/user.png">
+                    <p> admin </p>
+                  </div>
+                  <div class="comment d-flex flex-row">
+                      <img src="img/comment.png">
+                      <p> 1205 </p>
+                    </div>
+                    <div class="view d-flex flex-row">
+                        <img src="img/view.png">
+                        <p> 1205 </p>
+                      </div>
+                </div>
+                <h5> Integer ornare libero nisi. Duis ac magna urna. Nulla facilisi. Phasellus at ante magna. Quisque nec porta nulla. Suspendisse nec orci vel elit aliquet blandit in non orci. Vivamus posuere dui eget lacinia rutrum. Cum sociis natoque penatibus ...</h5>
+                <button>view more</button>
+            </div>
+              </div>
+
+              <img src="img/arrow.png" class="arrow d-block">
+
+          </div>
+        </div>
+      </section>
+
+
+
+      <!-- follow -->
+
+      <section class="follow">
+          <div class="hover-bg"></div>
+        <div class="container">
+
+        
+          <h2> Follow <span> Creativia </span></h2>
+          <div class="social row d-flex flex-row justify-content-center">
+
+            <div class="social-item d-flex flex-column align-items-center">
+
+                <div class="hex">
+                    <div class="hex inner d-flex justify-content-center align-items-center">
+                        <i class="fab fa-facebook-f"></i>
+                    </div>
+                </div>
+            <p>20000</p>
+          </div>
+
+          <div class="social-item d-flex flex-column align-items-center">
+            <div class="hexagon d-flex justify-content-center align-items-center">
+                <i class="fab fa-twitter"></i>
+          </div>
+          <p>99900</p>
+          </div>
+
+          <div class="social-item d-flex flex-column align-items-center">
+          <div class="hexagon d-flex justify-content-center align-items-center">
+              <i class="fab fa-pinterest-p"></i>
+        </div>
+        <p>5000</p>
+        </div>
+
+        <div class="social-item d-flex flex-column align-items-center">
+        <div class="hexagon d-flex justify-content-center align-items-center">
+            <i class="fab fa-google-plus-g"></i>
+      </div>
+      <p>200</p>
+          </div>
+        </div>
+          <div class="line">
+              <img src="img/shape-line.png">
+              </div>
+        </div>
+      </section>
+
+
+      <!-- fine -->
+
+      <section class="fine">
+        <div class="container">
+            <h2>Fine us <span>here</span></h2>
+            <p>Lorem ipsum dolor sit amet, consectetur <span>adipiscing elit.</span> Integer sed magna vel velit dignissim luctus eu in urna. Dapibus egestas turpis. </p>
+         
+        </div>
+      </section>
+
+      <!--  footer  -->
+
+      <section class="footer">
+          <div class="container">
+              <h4> Creativia </h4>
+              <p>Design by  Amr Srour</p>
+          </div>
+        </section>
 
 
 

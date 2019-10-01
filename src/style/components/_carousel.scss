@@ -54,9 +54,11 @@
                 border-radius: 0%;
                 margin: 0 15px;
                 background-color: #131313;
+                outline: none;
             
                 &:hover {
                 background-color: $pink;
+                outline: none;
             }
         }
 

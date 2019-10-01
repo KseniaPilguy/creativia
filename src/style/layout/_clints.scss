@@ -30,10 +30,6 @@
 }
 
 .clints-section {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;
 
     .comments {
         text-align: center;
@@ -65,9 +61,6 @@
 
           .scroll-bar {
               margin-top: 28px;
-              display: flex;
-              flex-direction: row;
-              justify-content: center;
                
               button {
                   margin-right: 5px;
@@ -85,21 +78,14 @@
     }
 
     .companies-names {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center; 
         max-width: 650px;
         padding-bottom: 100px;
 
         .block {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
         width: 270px;
         height: 116px;
         background-image: url(../../img/bg-block-clints.png);
-        margin: 15px 20px;
+        margin: 15px auto;
 
         img {
             margin-right: 8px
