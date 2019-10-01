@@ -1,0 +1,121 @@
+.clints {
+    width: 100%;
+    background-image: url(../../img/bg-clints.png);
+    background-size: cover; 
+
+    .caption {
+
+    h2 {
+        font: 30px 'Raleway-Bold', sans-serif;
+        color: $white;
+        text-align: center;
+        margin: 0 auto 50px;
+        padding-top: 100px;
+
+        span {
+            color: $pink;
+        }
+    }
+
+    p {
+        font: 16px 'Lato-Bold',sans-serif;
+        text-align: center;
+        margin-bottom: 100px;
+        color: $lightGrey;
+
+        span {
+            color: $pink;
+        }
+    }
+}
+
+.clints-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    .comments {
+        text-align: center;
+
+        h4 {
+            font: 20px 'Raleway-Medium', sans-serif;
+            text-transform: uppercase;
+            color: $white; 
+            margin: 0 0 51px 0;
+        }
+
+        p {
+            font: 16px 'Lato-Regular', sans-serif;
+            color: $listColor;
+            margin: 0 auto 47px;
+            max-width: 600px;
+        }
+
+        .clip-polygon {
+            clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+            margin-bottom: 17px;
+  }
+
+          h6 {
+            font: 16px 'Raleway-Bold', sans-serif;
+            text-transform: uppercase;
+            color: $pink; 
+          }
+
+          .scroll-bar {
+              margin-top: 28px;
+              display: flex;
+              flex-direction: row;
+              justify-content: center;
+               
+              button {
+                  margin-right: 5px;
+                  background-color: #e0e0e0;
+                  border: none;
+                  width: 8px;
+                  height: 8px;
+
+                  &:hover {
+                    background-color: $pink;
+                    cursor: pointer;
+                  }
+              }
+          }
+    }
+
+    .companies-names {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center; 
+        max-width: 650px;
+        padding-bottom: 100px;
+
+        .block {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: 270px;
+        height: 116px;
+        background-image: url(../../img/bg-block-clints.png);
+        margin: 15px 20px;
+
+        img {
+            margin-right: 8px
+        }
+
+            p {
+                margin: 0;
+                font: 24,16px 'Raleway-Bold' sans-serif; // шрифт
+            }
+    }
+    }
+}
+.line {
+    position: relative;
+    top: 9px;
+    margin: 0 auto;
+    display: block;
+}
+}

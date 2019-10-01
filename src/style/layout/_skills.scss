@@ -1,0 +1,19 @@
+.skills {
+    width: 100%;
+
+    h2 {
+        @include textCaption;
+
+        span { 
+            color: $pink;
+        }
+    }
+
+    p {
+        @include textDescription;
+
+        span { 
+            color: $pink;
+        }
+    }
+}

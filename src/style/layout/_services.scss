@@ -1,0 +1,138 @@
+.services {
+    width: 100%;
+    background-color: #272727;
+    padding-bottom: 43px;
+
+    h2 {
+        @include textCaption;
+        color: $white;
+        padding-top: 100px;
+
+        span { 
+            color: $pink;
+        }
+    }
+
+    p {
+        @include textDescription;
+        color: $listColor;
+        margin-bottom: 100px;
+
+        span { 
+            color: $pink;
+        }
+    }
+
+    .services-list {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        .service-item {
+            max-width: 570px;
+            margin: 0 15px 57px;
+
+            .service-item-caption {
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                align-items: center; 
+                margin-bottom: 30px;
+
+                .hexagon
+                {   width: 55px;
+                    height: 100px;
+                    background: $listColor;
+                    position: relative;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-right: 32px;
+                    left: 25px;
+
+                    img {
+                        width: 35px;
+                        height: 35px;
+                    }
+                }
+                
+                .hexagon:before
+                {   content: "";
+                    position: absolute;
+                    top: 0px;
+                    right: -25px;
+                    width: 0;
+                    height: 0;
+                    border-top: 50px solid transparent;
+                    border-left: 25px solid $listColor;
+                    border-bottom: 50px solid transparent;
+                }
+                
+                .hexagon:after
+                {   content: "";
+                    position: absolute;
+                    bottom: 0;
+                    left: -25px;
+                    width: 0;
+                    height: 0;
+                    border-top: 50px solid transparent;
+                    border-right: 25px solid $listColor;
+                    border-bottom: 50px solid transparent;
+                }
+            
+              h3 {
+                  font: 20px 'Raleway-Medium', sans-serif;
+                  text-transform: uppercase;
+                  color: $white;
+                  margin: 0 0 0 58px;
+              }
+            }
+
+              .service-item-description {
+                background-color: #343434;
+                font: 16px 'Lato-Regular', sans-serif;
+                color: $listColor;
+                text-align: justify;
+                padding: 30px;
+                margin-top: 48px;
+              }
+
+              &:hover {
+                  cursor: pointer;
+
+                  .service-item-caption {
+
+                    .hexagon {
+                        background-color: $pink;
+                    }
+
+                    .hexagon::before {
+                        border-left: 25px solid $pink;
+                    }
+
+                    .hexagon::after {
+                        border-right: 25px solid $pink;
+                    }
+                    
+                  }
+
+                
+                .service-item-description {
+                    background-color: #3d2329;
+                    color: $white;
+                }
+              }
+        }
+    }
+
+    .line {
+
+        img {
+        display: block;
+        margin: 0 auto;
+        position: relative;
+        top: 52px;
+        }
+    }
+}

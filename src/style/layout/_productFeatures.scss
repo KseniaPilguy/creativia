@@ -1,0 +1,205 @@
+.productFeatures {
+
+    h2 {
+        font: 30px 'Raleway-Bold', sans-serif;
+        color: $darkGrey;
+        text-align: center;
+        margin: 100px auto 50px;
+
+        span {
+            color: $pink;
+        }
+    }
+
+    p {
+        font: 16px 'Lato-Bold',sans-serif;
+        text-align: center;
+        margin-bottom: 102px;
+
+        span {
+            color: $pink;
+        }
+    }
+
+    .features {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .features-item {
+        display: flex;
+        flex-direction: column;
+
+        .content {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            width: 368px;
+            height: 51px;
+            border: 1px solid #e7e7e7;
+            margin-bottom: 27px;
+
+            p {
+                display: inline;
+                text-transform: uppercase;
+                color: $darkGrey;
+                font: 20px 'Raleway-Medium', sans-serif;
+                margin: 0;
+            }
+
+            .hexagon {
+                width: 27px;
+                height: 34px;
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            
+            .hexagon:before {
+                content: "";
+                position: absolute;
+                top: 0px;
+                right: -5px;
+                width: 0;
+                height: 0;
+                border-top: 17px solid transparent;
+                border-left: 10px solid #e7e7e7;
+                border-bottom: 17px solid transparent;
+            }
+            
+            .hexagon:after {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: -5px;
+                width: 0;
+                height: 0;
+                border-top: 17px solid transparent;
+                border-right: 10px solid #e7e7e7;
+                border-bottom: 17px solid transparent;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            &:hover {
+                background-color: $pink;
+
+                .hexagon {
+                    background-color: transparent;
+                }
+
+                p {
+                    color: $white;
+                }
+            }
+        }
+
+        .content-left {
+            display: flex;
+            justify-content: flex-end;
+
+            .hexagon { margin: 0 17px; }
+        }
+
+        .content-right {
+            text-align: left;
+
+            .hexagon { margin: 0 17px; }
+        }
+    }
+
+    .phone {
+        min-width: 400px;
+
+
+        .hexagon-big {
+            width: 273px;
+            height: 412px;
+            background: #4c4c4c;
+            position: relative;
+            top: 130px;
+            margin-bottom: 200px;
+            left: 60px;
+            margin-right: 0;
+
+            .dot {
+                z-index: 7;
+                position: absolute;
+                top: -155px;
+                left: 130px;
+            }
+
+                .found {
+                    position: absolute;
+                    top: -180px;
+                    left: -47px;
+                    z-index: 5;
+                }
+
+                .women {
+                    border: 3px solid black;
+                    position: absolute;
+                    z-index: 6;
+                }
+
+                .trapezoid {
+                    position: absolute;
+                    transform: rotate(180deg);
+                    border-bottom: 205px solid #262626;
+                    border-left: 100px solid transparent;
+                    border-right: 100px solid transparent;
+                    height: 0;
+                    width: 473px;
+                    bottom: 0;
+                    left: -100px;
+                    z-index: 5;
+
+                    button {
+                        transform: rotate(180deg);
+    position: absolute;
+    width: 170px;
+    top: 73px;
+    left: 50px;
+    height: 50px;
+    background-color: #393939;
+    border: none;
+    color: #fff;
+    text-transform: uppercase;
+    font: 20px Raleway-Medium,sans-serif;
+                    }
+                
+                  }
+            }
+            
+            .hexagon-big:before {
+                content: "";
+                position: absolute;
+                top: 0px;
+                right: -100px;
+                width: 0;
+                height: 0;
+                border-top: 206px solid transparent;
+                border-left: 100px solid #4c4c4c;
+                border-bottom: 206px solid transparent;
+            }
+            
+            .hexagon-big:after {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: -100px;
+                width: 0;
+                height: 0;
+                border-top: 206px solid transparent;
+                border-right: 100px solid #4c4c4c;
+                border-bottom: 206px solid transparent;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    }

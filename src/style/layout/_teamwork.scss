@@ -1,0 +1,133 @@
+.teamwork {
+    width: 100%;
+
+    h2 {
+        @include textCaption;
+
+        span { 
+            color: $pink;
+        }
+    }
+
+    p {
+        @include textDescription;
+
+        span { 
+            color: $pink;
+        }
+    }
+    
+    .teamwork-blocks {
+        margin: 100px 0; 
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        .employee-card {
+            position: relative;
+            width: 270px;
+            height: 360px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            border: 1px solid #e7e7e7;
+            margin: 0 15px;
+            overflow: hidden;
+
+            img {
+                border-bottom: 1px solid #e7e7e7;
+            }
+
+            h2 {
+                font: 20px 'Raleway-Medium', sans-serif;
+                color: $darkGrey;
+                text-transform: uppercase;
+                margin: 33px auto 25px;
+            }
+
+            h3 {
+                color: $textColor;
+                font: 16px 'Lato-Regular', sans-serif;
+                margin: 0 auto 32px;
+            }
+
+            .hover-employee-card {
+                display: none;
+                height: 240px;
+                width: 100%;
+                position: absolute;
+                background-color: $darkGrey;
+                justify-content: center;
+                align-items: center;
+                flex-direction: row;
+                top: 0;
+                left: 0;
+
+                .hexagon {
+                    width: 25px;
+                    height: 41px;
+                    background: $white;
+                    position: relative;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin: 0 15px;
+
+                    img {
+                        border-bottom: none;
+                    }
+                }
+                
+                .hexagon:before {
+                    content: "";
+                    position: absolute;
+                    top: 0px;
+                    right: -10px;
+                    width: 0;
+                    height: 0;
+                    border-top: 20px solid transparent;
+                    border-left: 10px solid $white;
+                    border-bottom: 20px solid transparent;
+                }
+                
+                .hexagon:after {
+                    content: "";
+                    position: absolute;
+                    bottom: 0;
+                    left: -10px;
+                    width: 0;
+                    height: 0;
+                    border-top: 20px solid transparent;
+                    border-right: 10px solid $white;
+                    border-bottom: 20px solid transparent;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+
+            &:hover {
+                border-color: $darkGrey;
+                cursor: pointer;
+
+                .hover-employee-card {
+                    display: flex;
+                }
+
+                h2 {
+                    color: $pink;
+                }
+            }
+
+        }
+    }
+
+    .line {
+
+        img {
+        display: block;
+        margin: 100px auto;
+        }
+    }
+}
