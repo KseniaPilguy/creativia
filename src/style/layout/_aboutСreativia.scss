@@ -112,33 +112,66 @@
 
         .left {
             position: absolute;
-            z-index: 1;
-            top: 18px;
-            object-fit: cover;
+            left: 0;
         }
 
         .center {
             position: absolute;
-            z-index: 3;
-            left: 80px;
-            object-fit: cover;
+            z-index: 1;
+            left: 50%;
+            transform: translateX(-50%) scale(1.045);
         }
 
         .right {
             position: absolute;
-            z-index: 2;
-            left: 220px;
-            top: 18px;
-            object-fit: cover;
+            right: 0;
         }
     }
 
-    .line {
+    .figure {
+        height: 200px;
 
-        img {
-        display: block;
-        margin: 100px auto;
-        }
+        .hexagon
+                {   width: 8px;
+                    height: 18px;
+                    background: $darkGrey;
+                    position: relative;
+                    margin: 200px;
+                  
+                  .line {
+                    width: 517px;
+                    height: 1px;
+                    background: $darkGrey;
+                    position: absolute;
+                    right: 50%;
+                    top: 50%;
+                    transform: translateX(50%);
+                  }
+                }
+                
+                .hexagon:before
+                {   content: "";
+                    position: absolute;
+                    top: 0px;
+                    right: -7px;
+                    width: 0;
+                    height: 0;
+                    border-top: 9px solid transparent;
+                    border-left: 7px solid $darkGrey;
+                    border-bottom: 9px solid transparent;
+                }
+                
+                .hexagon:after
+                {   content: "";
+                    position: absolute;
+                    bottom: 0;
+                    left: -7px;
+                    width: 0;
+                    height: 0;
+                    border-top: 9px solid transparent;
+                    border-right: 7px solid $darkGrey;
+                    border-bottom: 9px solid transparent;
+                }
     }
     
     .info {

@@ -3,12 +3,13 @@
     background-color: #272727;
     padding-bottom: 43px;
 
+
     h2 {
         @include textCaption;
         color: $white;
         padding-top: 100px;
 
-        span { 
+        span {
             color: $pink;
         }
     }
@@ -18,7 +19,7 @@
         color: $listColor;
         margin-bottom: 100px;
 
-        span { 
+        span {
             color: $pink;
         }
     }
@@ -32,17 +33,17 @@
             .service-item-caption {
                 margin-bottom: 30px;
 
-                .hexagon
-                {   width: 55px;
+                .hexagon {
+                    width: 55px;
                     height: 100px;
                     background: $listColor;
                     position: relative;
                     margin-right: 32px;
                     left: 25px;
                 }
-                
-                .hexagon:before
-                {   content: "";
+
+                .hexagon:before {
+                    content: "";
                     position: absolute;
                     top: 0px;
                     right: -25px;
@@ -52,9 +53,9 @@
                     border-left: 25px solid $listColor;
                     border-bottom: 50px solid transparent;
                 }
-                
-                .hexagon:after
-                {   content: "";
+
+                .hexagon:after {
+                    content: "";
                     position: absolute;
                     bottom: 0;
                     left: -25px;
@@ -64,28 +65,28 @@
                     border-right: 25px solid $listColor;
                     border-bottom: 50px solid transparent;
                 }
-            
-              h3 {
-                  font: 20px 'Raleway-Medium', sans-serif;
-                  text-transform: uppercase;
-                  color: $white;
-                  margin: 0 0 0 58px;
-              }
+
+                h3 {
+                    font: 20px 'Raleway-Medium', sans-serif;
+                    text-transform: uppercase;
+                    color: $white;
+                    margin: 0 0 0 58px;
+                }
             }
 
-              .service-item-description {
+            .service-item-description {
                 background-color: #343434;
                 font: 16px 'Lato-Regular', sans-serif;
                 color: $listColor;
                 text-align: justify;
                 padding: 30px;
                 margin-top: 48px;
-              }
+            }
 
-              &:hover {
-                  cursor: pointer;
+            &:hover {
+                cursor: pointer;
 
-                  .service-item-caption {
+                .service-item-caption {
 
                     .hexagon {
                         background-color: $pink;
@@ -102,25 +103,113 @@
                     .hexagon::after {
                         border-right: 25px solid $pink;
                     }
-                    
-                  }
 
-                
+                }
+
+
                 .service-item-description {
                     background-color: #3d2329;
                     color: $white;
                 }
-              }
+            }
         }
     }
 
-    .line {
-
-        img {
-        display: block;
-        margin: 0 auto;
+    .figure {
+        height: 18px;
+        width: 100%;
         position: relative;
-        top: 52px;
+        top: 51px;
+
+        .hexagon {
+            width: 8px;
+            height: 18px;
+            background: $pink;
+            position: relative;
+            margin: 200px;
+
+            .line {
+                width: 517px;
+                height: 1px;
+                background: $pink;
+                position: absolute;
+                right: 50%;
+                top: 50%;
+                transform: translateX(50%);
+            }
+        }
+
+        .hexagon:before {
+            content: "";
+            position: absolute;
+            top: 0px;
+            right: -7px;
+            width: 0;
+            height: 0;
+            border-top: 9px solid transparent;
+            border-left: 7px solid $pink;
+            border-bottom: 9px solid transparent;
+        }
+
+        .hexagon:after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: -7px;
+            width: 0;
+            height: 0;
+            border-top: 9px solid transparent;
+            border-right: 7px solid $pink;
+            border-bottom: 9px solid transparent;
+        }
+    }
+}
+
+
+@media screen and (min-width: 576px) and (max-width: 992px) {
+    .services {
+        .services-list {
+            .service-item {
+                .service-item-caption {
+                    h3 {
+                        margin-left: 30px;
+                        font-size: 16px;
+                    }
+
+                    .hexagon {
+                        transform: scale(0.8);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 576px) {
+    .services {
+        .services-list {
+            .service-item {
+                .service-item-caption {
+                    margin: 0;
+
+                    h3 {
+                        margin-left: 10px;
+                        font-size: 16px;
+                    }
+
+                    p {
+                        font-size: 14px;
+                    }
+
+                    .hexagon {
+                        transform: scale(0.6);
+                    }
+                }
+
+                .service-item-description {
+                    margin-top: 20px;
+                }
+            }
         }
     }
 }

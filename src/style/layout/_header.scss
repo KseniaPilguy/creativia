@@ -1,59 +1,143 @@
-
-.navbar-default {
+.navbar {
     width: 100%;
     height: 70px;
     background-color: #262626;
     z-index: 2;
 
     .navbar-nav {
-        
+        margin-right: 0 !important;
+        margin-left: 80px;
+
         li {
             list-style: none;
-            text-transform: uppercase;
-            color: #a4a4a4;
-            font: 18px 'Raleway-Regular', sans-serif;
-            margin-right: 34px;
 
-        a {
-            padding: 0;
-
-            &::before,
-            &::after {
-                content: '';
-                display: block;
-                background-color: transparent;
-                width: 27px;
-                height: 3px;
-                margin: 0 auto;
+            +li {
+                margin-left: 34px;
             }
 
-            &::before {
-                margin-bottom: 20px;
+
+            &:hover {
+
+                .nav-link {
+
+                    &::before,
+                    &::after {
+                        background-color: $pink;
+                    }
+                }
             }
 
-            &::after {
-                margin-top: 20px;
+            .nav-link {
+                padding: 0;
+                text-transform: uppercase;
+                color: #a4a4a4;
+                font: 18px 'Raleway-Regular', sans-serif;
+
+                &:hover {
+                    cursor: pointer;
+                    color: $white;
+                }
+
+                &::before,
+                &::after {
+                    content: '';
+                    display: block;
+                    background-color: transparent;
+                    width: 27px;
+                    height: 3px;
+                    margin: 0 auto;
+                }
+
+                &::before {
+                    margin-bottom: 20px;
+                }
+
+                &::after {
+                    margin-top: 20px;
+                }
             }
-        }
-
-        &:hover {
-            cursor: pointer;
-            color: $white;
-
-            a {
-
-            &::before,
-            &::after {
-                background-color: $pink;
-            }
-
-        }
-        }
-
         }
     }
+}
 
+
+@media screen and (min-width: 1000px) and (max-width: 1200px) {
+    .navbar {
+        .navbar-brand {
+            top: -35px;
+            position: relative;
+        }
+
+        .show {
+            position: relative;
+            background-color: $white;
+            width: 100%;
+        }
+
+        button {
+            position: relative;
+            top: -40px;
+
+            span {
+                border: 1px solid white;
+                border-radius: 5px;
+            }
+        }
+    }
 }
 
 
 
+@media screen and (min-width: 540px) and (max-width: 1000px) {
+    .navbar {
+        .navbar-brand {
+            top: -35px;
+            position: relative;
+            transform: scale(0.8);
+        }
+
+        .show {
+            position: relative;
+            background-color: $white;
+            width: 100%;
+        }
+
+        button {
+            position: relative;
+            top: -40px;
+
+            span {
+                border: 1px solid white;
+                border-radius: 5px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 540px) {
+    .navbar {
+        height: 40px;
+
+        .navbar-brand {
+            top: -50px;
+            position: relative;
+            transform: scale(0.6);
+        }
+
+        .show {
+            position: relative;
+            background-color: $white;
+            width: 100%;
+        }
+
+        button {
+            position: relative;
+            top: -40px;
+
+            span {
+                border: 1px solid white;
+                border-radius: 5px;
+            }
+        }
+    }
+}

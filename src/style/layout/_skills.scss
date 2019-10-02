@@ -11,9 +11,27 @@
 
     p {
         @include textDescription;
+        margin-bottom: 100px;
 
         span { 
             color: $pink;
+        }
+    }
+
+    .progress-container {
+      
+        .progress-bar-item {
+            h3 {
+                font: 20px 'Raleway-Medium', sans-serif;
+                color: $darkGrey;
+                margin: 0 auto 25px;
+                text-transform: uppercase;
+            }
+
+            p {
+                font: 16px 'Lato-Regular', sans-serif;
+                color: $textColor;
+            }
         }
     }
 }

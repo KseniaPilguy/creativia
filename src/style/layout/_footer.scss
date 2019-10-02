@@ -3,8 +3,20 @@
     height: 80px;
     background-color: $darkGrey;
 
-    h4, p {
-        font: 16px 'Lato Regular', sans-serif;
-        color: #5e5e5e;
+    .container {
+        height: 80px;
+        position: relative;
+
+        h4,
+        p {
+            font: 16px 'MyriadPro-Regular', sans-serif;
+            color: #5e5e5e;
+            margin: 0;
+        }
+
+        p {
+            position: absolute;
+            right: 40px;
+        }
     }
 }
