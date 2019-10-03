@@ -246,9 +246,14 @@
             }
         }
 
+        .left {
+            margin-bottom: -100px;
+        }
+
         .phone {
             top: 40px;
             transform: scale(0.6);
+            margin-bottom: -50px;
 
             .hexagon-big {
                 transform: translateX(-50%);

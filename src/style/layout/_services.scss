@@ -171,6 +171,7 @@
         .services-list {
             .service-item {
                 .service-item-caption {
+                    justify-content: center !important;
                     h3 {
                         margin-left: 30px;
                         font-size: 16px;
@@ -182,6 +183,15 @@
                 }
             }
         }
+        .figure {
+
+            .hexagon {
+
+                .line {
+                    width: 400px;
+                }
+            }
+        }
     }
 }
 
@@ -190,6 +200,7 @@
         .services-list {
             .service-item {
                 .service-item-caption {
+                    justify-content: center !important;
                     margin: 0;
 
                     h3 {
@@ -208,6 +219,15 @@
 
                 .service-item-description {
                     margin-top: 20px;
+                }
+            }
+        }
+        .figure {
+
+            .hexagon {
+
+                .line {
+                    width: 300px;
                 }
             }
         }

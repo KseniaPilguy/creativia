@@ -4,7 +4,7 @@
     h2 {
         @include textCaption;
 
-        span { 
+        span {
             color: $pink;
         }
     }
@@ -13,7 +13,7 @@
         @include textDescription;
         margin-bottom: 100px;
 
-        span { 
+        span {
             color: $pink;
         }
     }
@@ -24,8 +24,8 @@
 
         iframe {
             width: 100%;
-        } 
-}
+        }
+    }
 
     .users-messages {
         height: 575px;
@@ -43,16 +43,16 @@
             margin: 272px 130px 0 0;
 
             .coordinates-text {
-                margin: 34px 0 0 24px;                           
+                margin: 34px 0 0 24px;
 
-            p {
-                font: 16px 'MyriadPro-Regular', sans-serif;
-                color: $white;
-                margin-bottom: 9px;
-                text-align: left;
+                p {
+                    font: 16px 'MyriadPro-Regular', sans-serif;
+                    color: $white;
+                    margin-bottom: 9px;
+                    text-align: left;
+                }
             }
         }
-    }
 
         .message {
             background: $white;
@@ -62,39 +62,103 @@
             .wrapper {
                 padding: 50px 44px;
 
-            h3 {
-                font: 20px 'Raleway-Medium', sans-serif;
-                text-transform: uppercase;
-                color: $darkGrey;
-                margin: 0 0 50px 0;
+                h3 {
+                    font: 20px 'Raleway-Medium', sans-serif;
+                    text-transform: uppercase;
+                    color: $darkGrey;
+                    margin: 0 0 50px 0;
+                }
+
+                input {
+                    width: 100%;
+                    height: 32px;
+                    background: $white;
+                    border: 1px solid #e7e7e7;
+                    color: $textColor;
+                    font: 16px 'Raleway-Bold', sans-serif;
+                    margin-bottom: 21px;
+                    padding-left: 16px;
+                }
+
+                .last-input {
+                    height: 86px;
+                    margin-top: 6px;
+                }
+
+                button {
+                    width: 120px;
+                    height: 40px;
+                    background: $darkGrey;
+                    color: $white;
+                    font: 16px 'Lato-Regular', sans-serif;
+                    text-transform: uppercase;
+                    border: none;
+                    outline: none;
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+    .fine {
+        .users-messages {
+            .coordinates {
+                margin: 300px 80px 0 0;
+            }
+        }
+    }
+}
+
+
+@media screen and (min-width: 576px) and (max-width: 992px) {
+    .fine {
+
+        .map {
+            height: auto;
+        }
+
+        .users-messages {
+
+            .message {
+                width: 600px;
+                height: 475px;
+                position: relative;
+                top: 300px;
+                border: 0.5px solid black;
             }
 
-            input {
-                width: 100%;
-                height: 32px;
-                background: $white;
-                border: 1px solid #e7e7e7; 
-                color: $textColor;
-                font: 16px 'Raleway-Bold', sans-serif;
-                margin-bottom: 21px;
-                padding-left: 16px;
+            .coordinates {
+                margin: 160px 0 0 300px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 576px) {
+    .fine {
+
+        .map {
+            height: auto;
+        }
+
+        .users-messages {
+
+            .message {
+                width: 600px;
+                height: 475px;
+                position: relative;
+                top: 100px;
+                border: 0.5px solid black;
+
+                .wrapper {
+                    padding: 30px;
+                }
             }
 
-            .last-input {
-                height: 86px;
-                margin-top: 6px;
-            }
-
-            button {
-                width: 120px;
-                height: 40px;
-                background: $darkGrey;
-                color: $white;
-                font: 16px 'Lato-Regular', sans-serif;
-                text-transform: uppercase;
-                border: none;
-                outline: none;
-            }
+            .coordinates {
+                margin: 160px 0;
             }
         }
     }

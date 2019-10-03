@@ -20,10 +20,10 @@
 
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+        <span class="navbar-icon"></span>
       </button>
 
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <div class="collapse navbar-collapse navbar-drop" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
             <a class="nav-link" href="#">About us </a>
@@ -51,8 +51,6 @@
     </div>
   </nav>
 
-
-
   <div id="carousel" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active">
@@ -64,7 +62,6 @@
             volutpat tincidunt. Vestibulum vitae rhoncus odio Fusce sed enim erat. Mauris dictum lorem eu tortor
             porta placerat. Suspendisse ac vestibulum eros. Nulla mi ipsum, consequat commodo condimentum vitae,
           </p>
-
           <button type="button" class="btn">features</button>
           <button type="button" class="btn">Free PSD</button>
         </div>
@@ -73,7 +70,7 @@
       <div class="carousel-item active">
         <img src="img/caruselImg.png" class="d-block image" alt="creativia">
         <div class="hover-img"></div>
-        <div class="carousel-caption d-none d-md-block">
+        <div class="carousel-caption d-md-block">
           <h5>why <span>creativia ?</span></h5>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et dolor justo. Phasellus eu ligula ac nisl
             volutpat tincidunt. Vestibulum vitae rhoncus odio Fusce sed enim erat. Mauris dictum lorem eu tortor
@@ -103,8 +100,8 @@
       <h2> about <span>creativia</span></h2>
       <p>Lorem ipsum dolor sit amet, consectetur <span> adipiscing elit. </span> Integer sed magna vel velit dignissim
         luctus eu in urna. Dapibus egestas turpis. </p>
-      <div class="row">
-        <div class="col-12 col-lg-6 description">
+      <div class="content row d-flex align-items-center">
+        <div class="col-12 col-sm-10 col-md-8 col-lg-6 description">
           <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et dolor justo. Phasellus eu ligula ac nisl
             volutpat tincidunt. Vestibulum vitae rhoncus odio Fusce sed enim erat. Mauris dictum lorem eu tortor porta
             placerat. Suspendisse ac vestibulum eros. Nulla mi ipsum, consequat commodo condimentum vitae, </p>
@@ -164,7 +161,7 @@
           </div>
         </div>
 
-        <div class="col-12 col-lg-6 gallery">
+        <div class="col-6 gallery">
 
           <div class="clip-wrap center">
             <img src="img/center.png" alt="demo-clip-path" width="428" height="360" class="clip-polygon center d-block">
@@ -173,12 +170,14 @@
             <img src="img/leftImg.png" alt="demo-clip-path" width="428" height="360" class="clip-polygon left d-block">
           </div>
           <div class="clip-wrap right">
-            <img src="img/rightImg.png" alt="demo-clip-path" width="428" height="360"
+            <img src="img/rightimg.png" alt="demo-clip-path" width="428" height="360"
               class="clip-polygon right d-block">
           </div>
-
         </div>
       </div>
+
+
+
 
       <div class="figure d-flex justify-content-center align-items-center">
         <div class="hexagon">
@@ -189,7 +188,7 @@
       <div class="info ">
         <div class="creativia-items row flex-row justify-content-center flex-wrap flex-md-nowrap">
 
-          <div class="creativia-item col-12 col-sm-6 col-md-6 col-lg-3 d-flex flex-column align-items-center">
+          <div class="creativia-item col-12 col-sm-6 col-md-3 col-lg-3 d-flex flex-column align-items-center">
             <div class="hex">
               <div class="hex inner d-flex justify-content-center align-items-center">
                 <i class="fas fa-heart"></i>
@@ -200,7 +199,7 @@
               eget mauris fusce sit amet </p>
           </div>
 
-          <div class="creativia-item col-12 col-sm-6 col-md-6 col-lg-3 d-flex flex-column align-items-center">
+          <div class="creativia-item col-12 col-sm-6 col-md-3 col-lg-3 d-flex flex-column align-items-center">
             <div class="hex">
               <div class="hex inner d-flex justify-content-center align-items-center">
                 <i class="fas fa-check"></i>
@@ -211,7 +210,7 @@
               eget mauris fusce sit amet </p>
           </div>
 
-          <div class="creativia-item col-12 col-sm-6 col-md-6 col-lg-3 d-flex flex-column align-items-center">
+          <div class="creativia-item col-12 col-sm-6 col-md-3 col-lg-3 d-flex flex-column align-items-center">
             <div class="hex">
               <div class="hex inner d-flex justify-content-center align-items-center">
                 <i class="fas fa-mobile-alt"></i>
@@ -222,7 +221,7 @@
               eget mauris fusce sit amet </p>
           </div>
 
-          <div class="creativia-item col-12 col-sm-6 col-md-6 col-lg-3 d-flex flex-column align-items-center">
+          <div class="creativia-item col-12 col-sm-6 col-md-3 col-lg-3 d-flex flex-column align-items-center">
             <div class="hex">
               <div class="hex inner d-flex justify-content-center align-items-center">
                 <i class="fas fa-fire"></i>
@@ -241,87 +240,89 @@
 
   <!-- PORTFOLIO  -->
 
-  <section class="container-fluid portfolio">
-    <h2> protfolio </h2>
-    <ul>
-      <li>All</li>
-      <li>Illustration</li>
-      <li>Digital Art</li>
-      <li>Web design</li>
-    </ul>
+  <section class="portfolio">
+    <div class="container">
+      <h2> protfolio </h2>
+      <ul>
+        <li>All</li>
+        <li>Illustration</li>
+        <li>Digital Art</li>
+        <li>Web design</li>
+      </ul>
 
-    <div class="images row">
-      <div class="images-big image">
-        <img src="img/1.png">
-        <div class="hover-block">
-          <button class="btn-plus"></button>
-          <p>design name</p>
+      <div class="images row">
+        <div class="images-big image">
+          <img src="img/1.png">
+          <div class="hover-block">
+            <button class="btn-plus"></button>
+            <p>design name</p>
+          </div>
         </div>
-      </div>
-      <div class="images-small image">
-        <img src="img/2.png">
+        <div class="images-small image">
+          <img src="img/2.png">
 
 
-        <div class="hover-block">
-          <button class="btn-plus"></button>
-          <p>design name</p>
+          <div class="hover-block">
+            <button class="btn-plus"></button>
+            <p>design name</p>
+          </div>
         </div>
-      </div>
-      <div class="images-big image">
-        <img src="img/3.png">
+        <div class="images-big image">
+          <img src="img/3.png">
 
 
-        <div class="hover-block">
-          <button class="btn-plus"></button>
-          <p>design name</p>
+          <div class="hover-block">
+            <button class="btn-plus"></button>
+            <p>design name</p>
+          </div>
         </div>
-      </div>
-      <div class="images-small image">
-        <img src="img/4.png">
+        <div class="images-small image">
+          <img src="img/4.png">
 
 
-        <div class="hover-block">
-          <button class="btn-plus"></button>
-          <p>design name</p>
+          <div class="hover-block">
+            <button class="btn-plus"></button>
+            <p>design name</p>
+          </div>
         </div>
-      </div>
-      <div class="images-small image">
-        <img src="img/5.png">
+        <div class="images-small image">
+          <img src="img/5.png">
 
 
-        <div class="hover-block">
-          <button class="btn-plus"></button>
-          <p>design name</p>
+          <div class="hover-block">
+            <button class="btn-plus"></button>
+            <p>design name</p>
+          </div>
         </div>
-      </div>
-      <div class="images-big image">
-        <img src="img/6.png">
+        <div class="images-big image">
+          <img src="img/6.png">
 
 
-        <div class="hover-block">
-          <button class="btn-plus"></button>
-          <p>design name</p>
+          <div class="hover-block">
+            <button class="btn-plus"></button>
+            <p>design name</p>
+          </div>
         </div>
-      </div>
-      <div class="images-small image"><img src="img/7.png">
+        <div class="images-small image"><img src="img/7.png">
 
 
-        <div class="hover-block">
-          <button class="btn-plus"></button>
-          <p>design name</p>
+          <div class="hover-block">
+            <button class="btn-plus"></button>
+            <p>design name</p>
+          </div>
         </div>
-      </div>
-      <div class="images-big image"><img src="img/8.png">
+        <div class="images-big image"><img src="img/8.png">
 
 
-        <div class="hover-block">
-          <button class="btn-plus"></button>
-          <p>design name</p>
+          <div class="hover-block">
+            <button class="btn-plus"></button>
+            <p>design name</p>
+          </div>
         </div>
-      </div>
-      <div class="figure d-flex justify-content-center align-items-center">
-        <div class="hexagon">
-          <div class="line"></div>
+        <div class="figure d-flex justify-content-center align-items-center">
+          <div class="hexagon">
+            <div class="line"></div>
+          </div>
         </div>
       </div>
     </div>
@@ -339,7 +340,7 @@
 
       <div class="features flex-row justify-content-center flex-wrap row">
 
-        <div class="features-item col-12 col-xl-4 d-flex flex-column align-items-center contain contain-left">
+        <div class="features-item left col-12 col-xl-4 d-flex flex-column align-items-center contain contain-left">
           <div class="p-2 content d-flex flex-row align-items-center justify-content-end content-left">
             <p>Unlimited Color Options</p>
             <div class="hexagon d-flex justify-content-center align-items-center"><i class="fas fa-check"></i></div>
@@ -366,7 +367,7 @@
         </div>
 
 
-        <div class="features-item col-12 col-xl-4 d-flex flex-column contain align-items-center">
+        <div class="features-item right col-12 col-xl-4 d-flex flex-column contain align-items-center">
           <div class="p-2 content d-flex flex-row align-items-center content-right">
             <div class="hexagon d-flex justify-content-center align-items-center"><i class="fas fa-check"></i></div>
             <p>Unlimited Color Options </p>
@@ -549,21 +550,33 @@
       <div class="progress-container row">
 
         <div class="progress-bar-item col-sm-6 col-md-3 d-flex flex-column align-items-center">
+            <div class="progress-circle progress-90">
+                <div class="progress-number">90%</div>
+              </div>
           <h3>photoshop</h3>
           <p>Donec luctus tortor in placerat faucibus</p>
         </div>
 
         <div class="progress-bar-item col-sm-6 col-md-3 d-flex flex-column align-items-center">
+            <div class="progress-circle progress-80">
+                <div class="progress-number">80%</div>
+              </div>
           <h3>html</h3>
           <p>Donec luctus tortor in placerat faucibus</p>
         </div>
 
         <div class="progress-bar-item col-sm-6 col-md-3 d-flex flex-column align-items-center">
+            <div class="progress-circle progress-70">
+                <div class="progress-number">70%</div>
+              </div>
           <h3>php</h3>
           <p>Donec luctus tortor in placerat faucibus</p>
         </div>
 
         <div class="progress-bar-item col-sm-6 col-md-3 d-flex flex-column align-items-center">
+            <div class="progress-circle progress-90">
+                <div class="progress-number">90%</div>
+              </div>
           <h3>wordpress</h3>
           <p>Donec luctus tortor in placerat faucibus</p>
         </div>

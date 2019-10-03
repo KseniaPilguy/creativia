@@ -20,3 +20,10 @@
         }
     }
 }
+
+@media screen and (min-width: 320px) and (max-width: 576px) {
+    h4 {
+        position: absolute;
+        left: 40px;
+    }
+}
