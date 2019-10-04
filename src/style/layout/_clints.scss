@@ -31,6 +31,31 @@
 
     .clints-section {
 
+        .carousel-indicators {
+            @media screen and (min-width: 320px) and (max-width: 1200px) {
+                bottom: -40px;
+            }
+
+
+            bottom: 80px;
+
+            .btn {
+                margin-right: 5px;
+                background-color: $btn;
+                border: none;
+                width: 8px;
+                height: 8px;
+                opacity: 1;
+                padding: 0;
+                border-radius: 0;
+                cursor: pointer;
+            }
+
+            .active {
+                background-color: $pink;
+            }
+        }
+
         .comments {
             text-align: center;
 
@@ -39,7 +64,12 @@
                 text-transform: uppercase;
                 color: $white;
                 margin: 0 0 51px 0;
+
+                @media screen and (min-width: 320px) and (max-width: 576px) {
+                    position: initial;
+                }
             }
+
 
             p {
                 font: 16px 'Lato-Regular', sans-serif;
@@ -59,29 +89,19 @@
                 color: $pink;
             }
 
-            .scroll-bar {
-                margin: 28px 0;
-
-                button {
-                    margin-right: 5px;
-                    background-color: #e0e0e0;
-                    border: none;
-                    width: 8px;
-                    height: 8px;
-
-                    &:hover {
-                        background-color: $pink;
-                        cursor: pointer;
-                    }
-                }
-            }
         }
 
         .companies-names {
             max-width: 650px;
             padding-bottom: 100px;
 
+            @media screen and (min-width: 320px) and (max-width: 1200px) {
+                position: relative;
+                top: 70px;
+            }
+
             .block {
+                cursor: pointer;
                 width: 270px;
                 height: 116px;
                 background: radial-gradient(white, #898989);
@@ -120,6 +140,14 @@
                 right: 50%;
                 top: 50%;
                 transform: translateX(50%);
+
+                @media screen and (min-width: 576px) and (max-width: 768px) {
+                    width: 400px;
+                }
+
+                @media screen and (min-width: 320px) and (max-width: 576px) {
+                    width: 300px;
+                }
             }
         }
 
@@ -145,41 +173,6 @@
             border-top: 9px solid transparent;
             border-right: 7px solid $pink;
             border-bottom: 9px solid transparent;
-        }
-    }
-}
-
-@media screen and (min-width: 576px) and (max-width: 768px) {
-    .figure {
-
-        .hexagon {
-    
-            .line {
-                width: 400px;
-            }
-        }
-    }
-}
-
-@media screen and (min-width: 320px) and (max-width: 576px) {
-
-
-    .clints {
-        .clints-section {
-            .comments {
-                h4 {
-                    position: initial;
-                }
-            }
-        }
-        .figure {
-
-            .hexagon {
-        
-                .line {
-                    width: 300px;
-                }
-            }
         }
     }
 }

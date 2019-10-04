@@ -28,12 +28,23 @@
             color: $textColor;
             line-height: 1.5;
             margin-bottom: 42px;
+
+            @media screen and (min-width: 320px) and (max-width: 576px) {
+                font-size: 14px;
+            }
         }
     }
 
     .card {
         border-radius: 0;
         margin-bottom: 9px;
+
+        .card-body {
+
+            @media screen and (min-width: 320px) and (max-width: 576px) {
+                font-size: 12px;
+            }
+        }
 
         .collapse {
             height: 40px;
@@ -59,7 +70,7 @@
                     display: block;
                     width: 58px;
                     height: 43px;
-                    border: 1px solid #e7e7e7;
+                    border: 1px solid $light;
                     border-top: none;
                     border-bottom: none;
                     border-top: none;
@@ -71,15 +82,14 @@
             }
 
             .collapsed {
-                color: #262626;
-
+                color: $darkGrey;
 
                 &::before {
                     content: '';
                     display: block;
                     width: 58px;
                     height: 43px;
-                    border: 1px solid #e7e7e7;
+                    border: 1px solid $light;
                     border-top: none;
                     border-bottom: none;
                     border-top: none;
@@ -98,46 +108,100 @@
         line-height: 1.2;
         padding: 15px;
         text-align: justify;
+
+        @media screen and (min-width: 320px) and (max-width: 576px) {
+            padding: 10px;
+        }
     }
 
+    .content {
+        @media screen and (min-width: 576px) and (max-width: 1200px) {
+            justify-content: center; 
+        }
+    }
 
     .gallery {
         position: relative;
         top: -180px;
+
+        @media screen and (min-width: 576px) and (max-width: 1200px) {
+            top: 0;
+            margin-bottom: 300px;
+            min-width: 580px;
+        }
+
+        @media screen and (min-width: 320px) and (max-width: 576px) {
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            margin-bottom: 300px;
+            min-width: 510px;
+        }
 
         .clip-polygon {
             -webkit-clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
             clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
         }
 
+        .poligon {
+            display: inline-block;
+            position: absolute;
+            left: 50%;
+            z-index: 1;
+            transform: translateX(-50%) scale(1.1);
+            width: 428px;
+            height: 373px;
+            background: $white;
+            box-sizing: border-box;
+            clip-path: polygon(50% 1%, 25% 1%, 75% 1%, 100% 50%, 75% 100%, 25% 100%, 1% 50%, 25% 1%);
+
+            @media screen and (min-width: 576px) and (max-width: 1200px) {
+                transform: translateX(-50%) scale(0.9);
+            }
+
+            @media screen and (min-width: 320px) and (max-width: 576px) {
+                transform: translateX(-50%) scale(0.7);
+            }
+        }
+
+        .poligon img {
+            position: absolute;
+            width: 415px;
+            height: 360px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            clip-path: polygon(50% 1%, 25% 1%, 75% 1%, 100% 50%, 75% 100%, 25% 100%, 1% 50%, 25% 1%);
+        }
 
         .left {
             position: absolute;
             left: 0;
-
-            &:before {
-                content: '';
-                position: absolute;
-                top: 0;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                background-color: rgba(0, 0, 0, 0.5);
-                z-index: 1;
-            }
-        }
-
-        .center {
-            position: absolute;
-            z-index: 1;
-            left: 50%;
-            transform: translateX(-50%) scale(1.045);
         }
 
         .right {
             position: absolute;
             right: 0;
             object-fit: cover;
+        }
+
+        .left,
+        .right {
+
+            img {
+                @media screen and (min-width: 576px) and (max-width: 1200px) {
+                    transform: scale(0.75);
+                }
+
+                @media screen and (min-width: 360px) and (max-width: 576px) {
+                    transform: scale(0.6);
+                }
+
+                @media screen and (min-width: 320px) and (max-width: 360px) {
+                    transform: scale(0.55);
+                }
+
+            }
         }
     }
 
@@ -159,6 +223,14 @@
                 right: 50%;
                 top: 50%;
                 transform: translateX(50%);
+
+                @media screen and (min-width: 576px) and (max-width: 768px) {
+                    width: 400px;
+                }
+
+                @media screen and (min-width: 320px) and (max-width: 576px) {
+                    width: 300px;
+                }
             }
         }
 
@@ -196,7 +268,7 @@
         .hex {
             height: 76px;
             width: 50px;
-            background: black;
+            background: $black;
             position: relative;
 
             &:hover {
@@ -238,237 +310,41 @@
 
         .hex:before {
             left: -19px;
-            border-right: 20px solid black;
+            border-right: 20px solid $black;
         }
 
         .hex:after {
             right: -19px;
             top: 0;
-            border-left: 20px solid black;
+            border-left: 20px solid $black;
         }
 
         .hex.inner {
-            background-color: white;
+            background-color: $white;
             transform: scale(.98, .98);
             z-index: 1;
         }
 
         .hex.inner:before {
-            border-right: 20px solid white;
+            border-right: 20px solid $white;
         }
 
         .hex.inner:after {
-            border-left: 20px solid white;
+            border-left: 20px solid $white;
         }
 
         h3 {
             text-transform: uppercase;
             margin-top: 34px;
             font: 20px 'Raleway-Medium', sans-serif;
-            color: #262626;
+            color: $darkGrey;
             text-align: center;
         }
 
         p {
             font: 14px 'Lato-Regular', sans-serif;
-            color: #737373;
+            color: $dark;
             line-height: 1.4;
-        }
-    }
-}
-
-@media screen and (min-width: 992px) and (max-width: 1200px) {
-
-    .aboutCreativia {
-
-        .content {
-            flex-direction: column;
-
-            .gallery {
-                top: 0;
-                margin-bottom: 300px;
-                min-width: 580px;
-
-                .left,
-                .right {
-
-                    img {
-                        transform: scale(0.75);
-                    }
-                }
-
-                .center {
-                    transform: translateX(-50%) scale(0.9);
-                }
-            }
-        }
-    }
-}
-
-@media screen and (min-width: 768px) and (max-width: 992px) {
-
-    .aboutCreativia {
-
-        .content {
-            flex-direction: column;
-
-            .gallery {
-                top: 0;
-                margin-bottom: 300px;
-                min-width: 580px;
-
-                .left,
-                .right {
-
-                    img {
-                        transform: scale(0.75);
-                    }
-                }
-
-                .center {
-                    transform: translateX(-50%) scale(0.9);
-                }
-            }
-        }
-    }
-}
-
-@media screen and (min-width: 576px) and (max-width: 768px) {
-
-    .aboutCreativia {
-
-        .content {
-            flex-direction: column;
-
-            .gallery {
-                top: 0;
-                margin-bottom: 300px;
-                min-width: 570px;
-
-                .left,
-                .right {
-
-                    img {
-                        transform: scale(0.75);
-                    }
-                }
-
-                .center {
-                    transform: translateX(-50%) scale(0.9);
-                }
-            }
-        }
-
-        .figure {
-
-            .hexagon {
-
-                .line {
-                    width: 400px;
-                }
-            }
-        }
-    }
-}
-
-@media screen and (min-width: 360px) and (max-width: 576px) {
-
-    .aboutCreativia {
-
-        .description {
-
-            p {
-                font-size: 14px;
-            }
-        }
-
-        .content {
-
-            .card-body {
-                font-size: 12px;
-            }
-
-
-            .gallery {
-                top: 0;
-                left: 50%;
-                transform: translateX(-50%);
-                margin-bottom: 300px;
-                min-width: 510px;
-
-                .left,
-                .right {
-
-                    img {
-                        transform: scale(0.6);
-                    }
-                }
-
-                .center {
-                    transform: translateX(-50%) scale(0.8);
-                    top: 20px;
-                }
-            }
-        }
-        .figure {
-
-            .hexagon {
-
-                .line {
-                    width: 300px;
-                }
-            }
-        }
-    }
-}
-
-
-@media screen and (min-width: 320px) and (max-width: 360px) {
-
-    .aboutCreativia {
-
-        .description {
-
-            p {
-                font-size: 14px;
-            }
-        }
-
-        .content {
-
-            .card-body {
-                font-size: 12px;
-            }
-
-            .gallery {
-                top: 0;
-                left: 50%;
-                transform: translateX(-50%);
-                margin-bottom: 300px;
-                min-width: 510px;
-
-                .left,
-                .right {
-
-                    img {
-                        transform: scale(0.55);
-                    }
-                }
-
-                .center {
-                    transform: translateX(-50%) scale(0.75);
-                    top: 20px;
-                }
-            }
-        }
-        .figure {
-
-            .hexagon {
-
-                .line {
-                    width: 300px;
-                }
-            }
         }
     }
 }

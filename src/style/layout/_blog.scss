@@ -30,6 +30,15 @@
                 width: 370px;
                 height: 200px;
 
+
+                img {
+
+                    @media screen and (min-width: 576px) and (max-width: 1200px) {
+                        width: 300px;
+                    }
+                }
+
+
                 .hover-block {
                     display: none;
                     width: 100%;
@@ -39,15 +48,34 @@
                     left: 0;
                     background-color: rgba(225, 255, 255, 0.5);
                     z-index: 2;
+
+                    @media screen and (min-width: 320px) and (max-width: 576px) {
+                        width: 300px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                    }
                 }
             }
 
             .item-description {
 
+                @media screen and (min-width: 320px) and (max-width: 1200px) {
+                    justify-content: center;
+                    align-items: center;
+                    margin-top: 10px;
+                }
+
+
+
                 h4 {
                     font: 20px 'Raleway-Semibold', sans-serif;
                     color: $darkGrey;
                     margin-bottom: 15px;
+
+                    @media screen and (min-width: 320px) and (max-width: 1200px) {
+                        position: initial;
+                        text-align: center;
+                    }
                 }
 
                 h5 {
@@ -55,6 +83,10 @@
                     color: $textColor;
                     text-align: justify;
                     margin-bottom: 29px;
+
+                    @media screen and (min-width: 320px) and (max-width: 1200px) {
+                        text-align: center;
+                    }
                 }
 
                 button {
@@ -62,7 +94,7 @@
                     height: 40px;
                     border: none;
                     background-color: $darkGrey;
-                    color: white;
+                    color: $white;
                     font: 16px 'Lato-Regular', sans-serif;
                     text-transform: uppercase;
                     outline: none;
@@ -81,7 +113,7 @@
 
                     p {
                         font: 12px 'Lato-Regular', sans-serif;
-                        color: #a2a2a2;
+                        color: $dark;
                         margin: 0 22px 0 0;
                     }
                 }
@@ -104,70 +136,6 @@
             position: relative;
             top: -11px;
             cursor: pointer;
-        }
-    }
-}
-
-@media screen and (min-width: 576px) and (max-width: 1200px) {
-    .blog {
-        .articles {
-            .article-item {
-                .item-img {
-                    img {
-                        width: 300px;
-                    }
-
-                    .hover-block {
-                        width: 300px;
-                        left: 50%;
-                        transform: translateX(-50%);
-                    }
-                }
-
-                .item-description {
-                    align-items: center;
-                    margin-top: 10px;
-
-                    h5 {
-                        text-align: center;
-                    }
-                }
-            }
-
-        }
-    }
-}
-
-@media screen and (min-width: 320px) and (max-width: 576px) {
-    .blog {
-        .articles {
-            .article-item {
-                .item-img {
-                    img {
-                        width: 300px;
-                    }
-
-                    .hover-block {
-                        width: 300px;
-                        left: 50%;
-                        transform: translateX(-50%);
-                    }
-                }
-
-                .item-description {
-                    align-items: center;
-                    margin-top: 10px;
-
-                    h4 {
-                        position: initial;
-                        text-align: center;
-                    }
-                    
-                    h5 {
-                        text-align: center;
-                    }
-                }
-            }
         }
     }
 }

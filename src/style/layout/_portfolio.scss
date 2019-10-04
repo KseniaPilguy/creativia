@@ -1,6 +1,6 @@
 .portfolio {
     width: 100%;
-    background-color: #262626;
+    background-color: $darkGrey;
     text-align: center;
     padding: 0;
 
@@ -19,13 +19,20 @@
         li {
             display: inline-block;
             list-style: none;
-            
             font: 16px 'Lato-Bold', sans-serif;
             color: $listColor;
             text-transform: uppercase;
 
+            @media screen and (min-width: 320px) and (max-width: 576px) {
+                font-size: 14px;
+            }
+
             +li {
                 margin-left: 22px;
+
+                @media screen and (min-width: 320px) and (max-width: 576px) {
+                    margin-left: 10px;
+                }
             }
 
             &:hover {
@@ -82,6 +89,7 @@
                 .hover-block {
                     display: flex;
                     cursor: pointer;
+                    transition: 1s;
                 }
             }
 
@@ -95,10 +103,26 @@
 
         .images-big {
             width: 30%;
+
+            @media screen and (min-width: 576px) and (max-width: 992px) {
+                width: 60%;
+            }
+
+            @media screen and (min-width: 320px) and (max-width: 576px) {
+                width: 100%;
+            }
         }
 
         .images-small {
             width: 20%;
+
+            @media screen and (min-width: 576px) and (max-width: 992px) {
+                width: 40%;
+            }
+
+            @media screen and (min-width: 320px) and (max-width: 576px) {
+                width: 100%;
+            }
         }
     }
 
@@ -123,6 +147,14 @@
                 right: 50%;
                 top: 50%;
                 transform: translateX(50%);
+
+                @media screen and (min-width: 576px) and (max-width: 768px) {
+                    width: 400px;
+                }
+
+                @media screen and (min-width: 320px) and (max-width: 576px) {
+                    width: 300px;
+                }
             }
         }
 
@@ -148,79 +180,6 @@
             border-top: 9px solid transparent;
             border-right: 7px solid $pink;
             border-bottom: 9px solid transparent;
-        }
-    }
-}
-
-@media screen and (min-width: 768px) and (max-width: 992px) {
-    .portfolio {
-        .images {
-            .images-big {
-                width: 60%;
-            }
-
-            .images-small {
-                width: 40%;
-            }
-        }
-    }
-}
-
-@media screen and (min-width: 576px) and (max-width: 768px) {
-    .portfolio {
-        .images {
-            .images-big {
-                width: 60%;
-            }
-
-            .images-small {
-                width: 40%;
-            }
-        }
-        .figure {
-
-            .hexagon {
-        
-                .line {
-                    width: 400px;
-                }
-            }
-        }
-    }
-}
-
-
-
-
-@media screen and (min-width: 320px) and (max-width: 576px) {
-    .portfolio {
-
-        li {
-            font-size: 14px;
-            
-            +li {
-                margin-left: 10px;
-            }
-
-        }
-        .images {
-            .images-big {
-                width: 100%;
-            }
-
-            .images-small {
-                width: 100%;
-            }
-        }
-
-        .figure {
-
-            .hexagon {
-        
-                .line {
-                    width: 300px;
-                }
-            }
         }
     }
 }

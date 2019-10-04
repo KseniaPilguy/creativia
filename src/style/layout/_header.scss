@@ -1,18 +1,75 @@
 .navbar {
     width: 100%;
     height: 70px;
-    background-color: #262626;
+    background-color: $darkGrey;
     z-index: 2;
+
+    @media screen and (min-width: 540px) and (max-width: 1000px) {
+        height: 50px;
+    }
+
+    @media screen and (min-width: 320px) and (max-width: 540px) {
+        height: 30px;
+    }
+
+    .navbar-brand {
+
+        @media screen and (min-width: 1000px) and (max-width: 1200px) {
+            top: -35px;
+            position: relative;
+            z-index: 5;
+        }
+
+        @media screen and (min-width: 768px) and (max-width: 1000px) {
+            top: -35px;
+            position: relative;
+            transform: scale(0.8);
+            z-index: 5;
+        }
+
+        @media screen and (min-width: 540px) and (max-width: 768px) {
+            top: -45px;
+            position: relative;
+            transform: scale(.7);
+            z-index: 5;
+        }
+
+        @media screen and (min-width: 320px) and (max-width: 540px) {
+            top: -50px;
+            left: -55px;
+            position: relative;
+            transform: scale(.5);
+            z-index: 5;
+        }
+    }
 
     .navbar-toggler {
         width: 40px;
         height: 30px;
-        border: 1px solid white;
+        border: 1px solid $white;
         position: relative;
         top: -50px;
         left: -50px;
         outline: none;
         cursor: pointer;
+
+        @media screen and (min-width: 1000px) and (max-width: 1200px) {
+            top: -40px;
+        }
+
+        @media screen and (min-width: 347px) and (max-width: 540px) {
+            width: 30px;
+            height: 20px;
+            top: -60px;
+            left: -20px;
+        }
+
+        @media screen and (min-width: 320px) and (max-width: 347px) {
+            width: 30px;
+            height: 20px;
+            top: -135px;
+            left: 250px;
+        }
 
         span {
             width: 15px;
@@ -49,15 +106,74 @@
         }
     }
 
+    .navbar-drop {
+
+        @media screen and (min-width: 1000px) and (max-width: 1200px) {
+            background-color: $darkGrey;
+            position: absolute;
+            width: 100%;
+            left: 0px;
+            top: 70px;
+            border-top: 1px solid $black;
+            transition: 0.5s;
+        }
+
+        @media screen and (min-width: 540px) and (max-width: 1000px) {
+            background-color: $darkGrey;
+            position: absolute;
+            width: 100%;
+            left: 0px;
+            top: 50px;
+            border-top: 1px solid $black;
+            transition: 0.5s;
+        }
+
+        @media screen and (min-width: 347px) and (max-width: 540px) {
+            background-color: $darkGrey;
+            position: absolute;
+            width: 100%;
+            left: 0px;
+            top: 30px;
+            border-top: 1px solid $black;
+            transition: 0.5s;
+        }
+
+        @media screen and (min-width: 320px) and (max-width: 540px) {
+            background-color: $darkGrey;
+            position: absolute;
+            width: 100%;
+            left: 0px;
+            top: 30px;
+            border-top: 1px solid $black;
+            transition: 0.5s;
+        }
+    }
+
     .navbar-nav {
         margin-right: 0 !important;
         margin-left: 80px;
+
+        @media screen and (min-width: 320px) and (max-width: 1200px) {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 20px;
+        }
 
         li {
             list-style: none;
 
             +li {
                 margin-left: 34px;
+
+                @media screen and (min-width: 347px) and (max-width: 768px) {
+                    margin-left: 14px;
+                }
+
+                @media screen and (min-width: 320px) and (max-width: 347px) {
+                    margin-left: 10px;
+                }
             }
 
 
@@ -77,6 +193,10 @@
                 text-transform: uppercase;
                 color: #a4a4a4;
                 font: 18px 'Raleway-Regular', sans-serif;
+
+                @media screen and (min-width: 347px) and (max-width: 768px) {
+                    font-size: 14px;
+                }
 
                 &:hover {
                     cursor: pointer;
@@ -103,246 +223,19 @@
             }
         }
     }
-}
-
-
-@media screen and (min-width: 1000px) and (max-width: 1200px) {
-    .navbar {
-
-        .navbar-toggler {
-            top: -40px;
-        }
-
-        .navbar-drop {
-            background-color: rgb(38, 38, 38);
-            position: absolute;
-            width: 100%;
-            left: 0px;
-            top: 70px;
-            border-top: 1px solid black;
-            transition: 0.5s;
-
-            ul {
-                display: flex;
-                flex-direction: row;
-                justify-content: center;
-                flex-wrap: wrap;
-                margin: 20px;
-            }
-        }
-
-        .navbar-brand {
-            top: -35px;
-            position: relative;
-            z-index: 5;
-        }
-    }
-}
-
-@media screen and (min-width: 768px) and (max-width: 1000px) {
-    .navbar {
-        height: 50px;
-
-        .navbar-brand {
-            top: -35px;
-            position: relative;
-            transform: scale(0.8);
-            z-index: 5;
-        }
-
-        .navbar-drop {
-            background-color: rgb(38, 38, 38);
-            position: absolute;
-            width: 100%;
-            left: 0px;
-            top: 50px;
-            border-top: 1px solid black;
-            transition: 0.5s;
-
-            ul {
-                display: flex;
-                flex-direction: row;
-                justify-content: center;
-                flex-wrap: wrap;
-                margin: 20px;
-            }
-        }
-    }
-}
-
-@media screen and (min-width: 540px) and (max-width: 768px) {
-    .navbar {
-        height: 50px;
-
-
-        .navbar-brand {
-            top: -45px;
-            position: relative;
-            transform: scale(.7);
-            z-index: 5;
-        }
-
-        .navbar-drop {
-            background-color: rgb(38, 38, 38);
-            position: absolute;
-            width: 100%;
-            left: 0px;
-            top: 50px;
-            border-top: 1px solid black;
-            transition: 0.5s;
-
-            ul {
-                display: flex;
-                flex-direction: row;
-                justify-content: center;
-                flex-wrap: wrap;
-                margin: 20px;
-
-                li {
-                    a {
-                        font-size: 14px;
-                    }
-
-                    +li {
-                        margin-left: 14px;
-                    }
-                }
-            }
-        }
-    }
-}
-
-
-@media screen and (min-width: 347px) and (max-width: 540px) {
-    .navbar {
-        height: 30px;
-
-        .navbar-toggler {
-            width: 30px;
-            height: 20px;
-            top: -60px;
-            left: -20px;
-
-            span {
-                width: 15px;
-
-                &::after,
-                &::before {
-                    width: 15px;
-                }
-            }
-        }
-
-        .navbar-nav {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin: 20px;
-        }
-
-        .navbar-drop {
-            background-color: rgb(38, 38, 38);
-            position: absolute;
-            width: 100%;
-            left: 0px;
-            top: 30px;
-            border-top: 1px solid black;
-            transition: 0.5s;
-
-            ul {
-                display: flex;
-                flex-direction: row;
-                justify-content: center;
-                flex-wrap: wrap;
-                margin: 20px;
-
-                li {
-                    a {
-                        font-size: 14px;
-                    }
-
-                    +li {
-                        margin-left: 14px;
-                    }
-                }
-            }
-        }
-
-        .navbar-brand {
-            top: -50px;
-            left: -55px;
-            position: relative;
-            transform: scale(.5);
-            z-index: 5;
-        }
+    
+    @media screen and (min-width: 320px) and (max-width: 540px) {
 
         .show {
-            background-color: rgb(38, 38, 38);
+            background-color: $darkGrey;
             position: absolute;
             width: 100%;
             left: 0px;
             top: 30px;
-            border-top: 1px solid black;
+            border-top: 1px solid $black;
         }
     }
 }
 
-@media screen and (min-width: 320px) and (max-width: 347px) {
-    .navbar {
-        height: 30px;
 
-        .navbar-brand {
-            top: -50px;
-            left: -55px;
-            position: relative;
-            transform: scale(.5);
-            z-index: 5;
-        }
 
-        .navbar-toggler {
-            width: 30px;
-            height: 20px;
-            top: -135px;
-            left: 250px;
-
-            span {
-                width: 15px;
-
-                &::after,
-                &::before {
-                    width: 15px;
-                }
-            }
-        }
-
-        .navbar-nav {
-
-            .navbar-drop {
-                background-color: rgb(38, 38, 38);
-                position: absolute;
-                width: 100%;
-                left: 0px;
-                top: 30px;
-                border-top: 1px solid black;
-                transition: 0.5s;
-                display: flex;
-                flex-direction: row;
-                justify-content: center;
-                flex-wrap: wrap;
-                margin: 20px;
-
-                li {
-                    .nav-link {
-                        font-size: 14px;
-                    }
-
-                    +li {
-                        margin-left: 10px;
-                    }
-                }
-
-            }
-        }
-    }
-}

@@ -139,6 +139,14 @@
                     right: 50%;
                     top: 50%;
                     transform: translateX(50%);
+
+                    @media screen and (min-width: 576px) and (max-width: 768px) {
+                        width: 400px;
+                    }
+
+                    @media screen and (min-width: 320px) and (max-width: 576px) {
+                        width: 300px;
+                    }
                 }
             }
 
@@ -164,34 +172,6 @@
                 border-top: 9px solid transparent;
                 border-right: 7px solid $pink;
                 border-bottom: 9px solid transparent;
-            }
-        }
-    }
-}
-
-@media screen and (min-width: 576px) and (max-width: 768px) {
-    .follow {
-        .figure {
-
-            .hexagon {
-
-                .line {
-                    width: 400px;
-                }
-            }
-        }
-    }
-}
-
-@media screen and (min-width: 320px) and (max-width: 576px) {
-    .follow {
-        .figure {
-
-            .hexagon {
-
-                .line {
-                    width: 300px;
-                }
             }
         }
     }

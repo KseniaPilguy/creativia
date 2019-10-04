@@ -26,8 +26,12 @@
         .content {
             width: 368px;
             height: 51px;
-            border: 1px solid #e7e7e7;
+            border: 1px solid $light;
             margin-bottom: 27px;
+
+            @media screen and (min-width: 320px) and (max-width: 540px) {
+                width: 310px;
+            }
 
             p {
                 display: inline;
@@ -35,13 +39,21 @@
                 color: $darkGrey;
                 font: 20px 'Raleway-Medium', sans-serif;
                 margin: 0;
+
+                @media screen and (min-width: 320px) and (max-width: 540px) {
+                    font-size: 16px;
+                }
             }
 
             .hexagon {
                 width: 27px;
                 height: 34px;
                 position: relative;
-                background: #e7e7e7;
+                background: $light;
+
+                i {
+                    transform: scale(0.8);
+                }
             }
 
             .hexagon:before {
@@ -52,7 +64,7 @@
                 width: 0;
                 height: 0;
                 border-top: 17px solid transparent;
-                border-left: 10px solid #e7e7e7;
+                border-left: 10px solid $light;
                 border-bottom: 17px solid transparent;
             }
 
@@ -64,7 +76,7 @@
                 width: 0;
                 height: 0;
                 border-top: 17px solid transparent;
-                border-right: 10px solid #e7e7e7;
+                border-right: 10px solid $light;
                 border-bottom: 17px solid transparent;
                 display: flex;
                 justify-content: center;
@@ -80,6 +92,7 @@
 
                     i {
                         color: $pink;
+
                     }
                 }
 
@@ -114,19 +127,44 @@
         }
     }
 
+    .left {
+
+        @media screen and (min-width: 320px) and (max-width: 540px) {
+            margin-bottom: -100px;
+        }
+    }
+
     .phone {
         min-width: 400px;
         left: -5px;
 
+        @media screen and (min-width: 540px) and (max-width: 1200px) {
+            top: 40px;
+            transform: scale(0.95);
+        }
+
+        @media screen and (min-width: 320px) and (max-width: 540px) {
+            top: 40px;
+            transform: scale(0.6);
+            margin-bottom: -50px;
+        }
+
         .hexagon-big {
             width: 273px;
             height: 412px;
-            background: #4c4c4c;
+            background: $bg-phone;
             position: relative;
             top: 130px;
             left: 50px;
             margin-bottom: 200px;
             margin-right: 0;
+
+
+
+            @media screen and (min-width: 320px) and (max-width: 1200px) {
+                transform: translateX(-50%);
+                left: 50%;
+            }
 
             .dot {
                 z-index: 7;
@@ -146,7 +184,7 @@
                 width: 334px;
                 height: 336px;
                 border-radius: 4px;
-                border: 3px solid black;
+                border: 3px solid $black;
                 position: absolute;
                 bottom: 200px;
                 left: -30px;
@@ -157,7 +195,7 @@
             .trapezoid {
                 position: absolute;
                 transform: rotate(180deg);
-                border-bottom: 205px solid #262626;
+                border-bottom: 205px solid $darkGrey;
                 border-left: 100px solid transparent;
                 border-right: 100px solid transparent;
                 height: 0;
@@ -173,7 +211,7 @@
                     top: 73px;
                     left: 50px;
                     height: 50px;
-                    background-color: #393939;
+                    background-color: $btn-dark;
                     border: none;
                     color: #fff;
                     text-transform: uppercase;
@@ -191,7 +229,7 @@
             width: 0;
             height: 0;
             border-top: 206px solid transparent;
-            border-left: 100px solid #4c4c4c;
+            border-left: 100px solid $bg-phone;
             border-bottom: 206px solid transparent;
         }
 
@@ -203,62 +241,11 @@
             width: 0;
             height: 0;
             border-top: 206px solid transparent;
-            border-right: 100px solid #4c4c4c;
+            border-right: 100px solid $bg-phone;
             border-bottom: 206px solid transparent;
             display: flex;
             justify-content: center;
             align-items: center;
-        }
-    }
-}
-
-
-@media screen and (min-width: 540px) and (max-width: 1200px) {
-    .productFeatures {
-        .features-item {
-            .content {
-                justify-content: center !important;
-            }
-        }
-
-        .phone {
-            top: 40px;
-            transform: scale(0.95);
-
-            .hexagon-big {
-                transform: translateX(-50%);
-                left: 50%;
-            }
-        }
-    }
-}
-
-@media screen and (min-width: 320px) and (max-width: 540px) {
-    .productFeatures {
-        .features-item {
-            .content {
-                justify-content: center !important;
-                width: 310px;
-
-                p {
-                    font-size: 16px;
-                }
-            }
-        }
-
-        .left {
-            margin-bottom: -100px;
-        }
-
-        .phone {
-            top: 40px;
-            transform: scale(0.6);
-            margin-bottom: -50px;
-
-            .hexagon-big {
-                transform: translateX(-50%);
-                left: 50%;
-            }
         }
     }
 }

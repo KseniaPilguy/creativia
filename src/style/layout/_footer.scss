@@ -10,20 +10,20 @@
         h4,
         p {
             font: 16px 'MyriadPro-Regular', sans-serif;
-            color: #5e5e5e;
+            color: $dark-text;
             margin: 0;
+        }
+
+        h4 {
+            @media screen and (min-width: 320px) and (max-width: 576px) {
+                position: absolute;
+                left: 40px;
+            }
         }
 
         p {
             position: absolute;
             right: 40px;
         }
-    }
-}
-
-@media screen and (min-width: 320px) and (max-width: 576px) {
-    h4 {
-        position: absolute;
-        left: 40px;
     }
 }

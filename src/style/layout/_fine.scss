@@ -1,5 +1,6 @@
 .fine {
     width: 100%;
+    position: relative;
 
     h2 {
         @include textCaption;
@@ -20,27 +21,56 @@
 
     .map {
         padding: 0;
-        height: 575px;
+        min-height: 575px;
+        position: relative;
 
         iframe {
             width: 100%;
-        }
-    }
+            position: absolute;
 
-    .users-messages {
-        height: 575px;
-        position: relative;
-        top: -575px;
+            @media screen and (min-width: 320px) and (max-width: 992px) {
+                position: static;
+            }
 
-        .container {
-            height: 575px;
+
         }
 
-        .coordinates {
-            width: 300px;
-            height: 170px;
-            background: $darkGrey;
-            margin: 272px 130px 0 0;
+        .users-messages {
+
+            .container {
+                height: 575px;
+            }
+
+            .coordinates {
+                position: relative;
+                width: 300px;
+                max-height: 170px;
+                background: $darkGrey;
+                margin-right: 130px;
+                top: 50%;
+
+                @media screen and (min-width: 768px) and (max-width: 992px) {
+                    position: absolute;
+                    top: 20%;
+                    right: 10%;
+                }
+
+                @media screen and (min-width: 576px) and (max-width: 768px) {
+                    position: absolute;
+                    top: 20%;
+                    right: 20px;
+                    margin-right: 0;
+                }
+
+                @media screen and (min-width: 320px) and (max-width: 576px) {
+                    position: absolute;
+                    top: 20%;
+                    margin-right: 0;
+                    right: 50%;
+                    transform: translateX(50%);
+                    margin-right: 0;
+                }
+            }
 
             .coordinates-text {
                 margin: 34px 0 0 24px;
@@ -52,15 +82,40 @@
                     text-align: left;
                 }
             }
+
+            svg {
+                width: 56px;
+                height: 56px;
+                position: absolute;
+                right: 15px;
+                bottom: -55px;
+
+                polygon {
+                    fill: $darkGrey;
+                }
+            }
         }
 
         .message {
+            position: relative;
             background: $white;
             width: 475px;
             height: 475px;
 
+            @media screen and (min-width: 320px) and (max-width: 992px) {
+                width: 600px;
+                height: 475px;
+                top: -10%;
+                border: 1px solid $black;
+            }
+
             .wrapper {
                 padding: 50px 44px;
+
+                @media screen and (min-width: 320px) and (max-width: 576px) {
+                    padding: 40px 24px;
+                }
+
 
                 h3 {
                     font: 20px 'Raleway-Medium', sans-serif;
@@ -73,7 +128,7 @@
                     width: 100%;
                     height: 32px;
                     background: $white;
-                    border: 1px solid #e7e7e7;
+                    border: 1px solid $light;
                     color: $textColor;
                     font: 16px 'Raleway-Bold', sans-serif;
                     margin-bottom: 21px;
@@ -95,70 +150,6 @@
                     border: none;
                     outline: none;
                 }
-            }
-        }
-    }
-}
-
-
-@media screen and (min-width: 992px) and (max-width: 1200px) {
-    .fine {
-        .users-messages {
-            .coordinates {
-                margin: 300px 80px 0 0;
-            }
-        }
-    }
-}
-
-
-@media screen and (min-width: 576px) and (max-width: 992px) {
-    .fine {
-
-        .map {
-            height: auto;
-        }
-
-        .users-messages {
-
-            .message {
-                width: 600px;
-                height: 475px;
-                position: relative;
-                top: 300px;
-                border: 0.5px solid black;
-            }
-
-            .coordinates {
-                margin: 160px 0 0 300px;
-            }
-        }
-    }
-}
-
-@media screen and (min-width: 320px) and (max-width: 576px) {
-    .fine {
-
-        .map {
-            height: auto;
-        }
-
-        .users-messages {
-
-            .message {
-                width: 600px;
-                height: 475px;
-                position: relative;
-                top: 100px;
-                border: 0.5px solid black;
-
-                .wrapper {
-                    padding: 30px;
-                }
-            }
-
-            .coordinates {
-                margin: 160px 0;
             }
         }
     }

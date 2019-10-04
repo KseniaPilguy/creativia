@@ -33,6 +33,14 @@
             position: relative;
             top: 87px;
 
+            @media screen and (min-width: 380px) and (max-width: 540px) {
+                top: 75px;
+            }
+
+            @media screen and (min-width: 320px) and (max-width: 380px) {
+                top: 65px;
+            }
+
             .hexagon {
                 width: 8px;
                 height: 18px;
@@ -48,6 +56,14 @@
                     right: 50%;
                     top: 50%;
                     transform: translateX(50%);
+
+                    @media screen and (min-width: 380px) and (max-width: 540px) {
+                        width: 400px;
+                    }
+
+                    @media screen and (min-width: 320px) and (max-width: 380px) {
+                        width: 300px;
+                    }
                 }
             }
 
@@ -78,56 +94,3 @@
     }
 }
 
-@media screen and (min-width: 380px) and (max-width: 540px) {
-    .twitter {
-        .figure {
-
-            .hexagon {
-
-                .line {
-                    width: 400px;
-                }
-            }
-        }
-    }
-}
-
-@media screen and (min-width: 380px) and (max-width: 540px) {
-    .twitter {
-        .twitter-container {
-            .figure {
-                top: 75px;
-            }
-        }
-
-        .figure {
-
-            .hexagon {
-
-                .line {
-                    width: 300px;
-                }
-            }
-        }
-    }
-}
-
-@media screen and (min-width: 320px) and (max-width: 380px) {
-    .twitter {
-        .twitter-container {
-            .figure {
-                top: 65px;
-            }
-        }
-
-        .figure {
-
-            .hexagon {
-
-                .line {
-                    width: 300px;
-                }
-            }
-        }
-    }
-}

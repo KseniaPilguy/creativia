@@ -1,6 +1,6 @@
 .services {
     width: 100%;
-    background-color: #272727;
+    background-color: $darkBg;
     padding-bottom: 43px;
 
 
@@ -33,6 +33,15 @@
             .service-item-caption {
                 margin-bottom: 30px;
 
+                @media screen and (min-width: 576px) and (max-width: 992px) {
+                    justify-content: center !important;
+                }
+
+                @media screen and (min-width: 320px) and (max-width: 576px) {
+                    justify-content: center !important;
+                    margin: 0;
+                }
+
                 .hexagon {
                     width: 55px;
                     height: 100px;
@@ -40,6 +49,14 @@
                     position: relative;
                     margin-right: 32px;
                     left: 25px;
+
+                    @media screen and (min-width: 576px) and (max-width: 992px) {
+                        transform: scale(0.8);
+                    }
+
+                    @media screen and (min-width: 320px) and (max-width: 576px) {
+                        transform: scale(0.6);
+                    }
                 }
 
                 .hexagon:before {
@@ -71,16 +88,30 @@
                     text-transform: uppercase;
                     color: $white;
                     margin: 0 0 0 58px;
+
+                    @media screen and (min-width: 576px) and (max-width: 992px) {
+                        margin-left: 30px;
+                        font-size: 16px;
+                    }
+
+                    @media screen and (min-width: 320px) and (max-width: 576px) {
+                        margin-left: 10px;
+                        font-size: 16px;
+                    }
                 }
             }
 
             .service-item-description {
-                background-color: #343434;
+                background-color: $description;
                 font: 16px 'Lato-Regular', sans-serif;
                 color: $listColor;
                 text-align: justify;
                 padding: 30px;
                 margin-top: 48px;
+
+                @media screen and (min-width: 320px) and (max-width: 576px) {
+                    margin-top: 20px;
+                }
             }
 
             &:hover {
@@ -108,7 +139,7 @@
 
 
                 .service-item-description {
-                    background-color: #3d2329;
+                    background-color: $purple;
                     color: $white;
                 }
             }
@@ -128,6 +159,8 @@
             position: relative;
             margin: 200px;
 
+
+
             .line {
                 width: 517px;
                 height: 1px;
@@ -136,6 +169,14 @@
                 right: 50%;
                 top: 50%;
                 transform: translateX(50%);
+
+                @media screen and (min-width: 576px) and (max-width: 992px) {
+                    width: 400px;
+                }
+
+                @media screen and (min-width: 320px) and (max-width: 576px) {
+                    width: 300px;
+                }
             }
         }
 
@@ -161,75 +202,6 @@
             border-top: 9px solid transparent;
             border-right: 7px solid $pink;
             border-bottom: 9px solid transparent;
-        }
-    }
-}
-
-
-@media screen and (min-width: 576px) and (max-width: 992px) {
-    .services {
-        .services-list {
-            .service-item {
-                .service-item-caption {
-                    justify-content: center !important;
-                    h3 {
-                        margin-left: 30px;
-                        font-size: 16px;
-                    }
-
-                    .hexagon {
-                        transform: scale(0.8);
-                    }
-                }
-            }
-        }
-        .figure {
-
-            .hexagon {
-
-                .line {
-                    width: 400px;
-                }
-            }
-        }
-    }
-}
-
-@media screen and (min-width: 320px) and (max-width: 576px) {
-    .services {
-        .services-list {
-            .service-item {
-                .service-item-caption {
-                    justify-content: center !important;
-                    margin: 0;
-
-                    h3 {
-                        margin-left: 10px;
-                        font-size: 16px;
-                    }
-
-                    p {
-                        font-size: 14px;
-                    }
-
-                    .hexagon {
-                        transform: scale(0.6);
-                    }
-                }
-
-                .service-item-description {
-                    margin-top: 20px;
-                }
-            }
-        }
-        .figure {
-
-            .hexagon {
-
-                .line {
-                    width: 300px;
-                }
-            }
         }
     }
 }
