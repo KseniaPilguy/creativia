@@ -60,11 +60,14 @@
                 position: absolute;
                 top: 50%;
                 width: 100%;
+                transform: translateY(-35%);
                 line-height: 1;
-                margin-top: -0.75rem;
                 text-align: center;
-                font-size: 1.5rem;
-                color: #777;
+                font: 40px 'Lato-Light', sans-serif;
+                color: $pink;
+                span {
+                    color: $black;
+                }
             }
 
             .progress-pie {
